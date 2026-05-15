@@ -8,40 +8,40 @@ A collection of Claude Code skills, settings, and configurations.
 
 | Skill | Description | Link |
 |-------|-------------|------|
-| `frontend-design` | Create distinctive, production-grade frontend interfaces with high design quality | — |
-| `frontend-developer` | Build React components, implement responsive layouts, and handle client-side state management | — |
+| `frontend-design` | Create distinctive, production-grade frontend interfaces with high design quality | [anthropics/skills](https://github.com/anthropics/skills) |
+| `frontend-developer` | Build React components, implement responsive layouts, and handle client-side state management | [anthropics/skills](https://github.com/anthropics/skills) · [mathewgeejo/agent-skills](https://github.com/mathewgeejo/agent-skills) |
 | `senior-frontend` | Frontend development skill for React, Next.js, TypeScript, and Tailwind CSS applications | — |
 | `senior-fullstack` | Fullstack development toolkit with project scaffolding for Next.js, FastAPI, MERN, and Django stacks | — |
-| `impeccable` | Design, redesign, shape, critique, audit, polish, or improve any frontend interface | — |
-| `high-end-visual-design` | Teaches the AI to design like a high-end agency with exact fonts, spacing, shadows, and animations | — |
+| `impeccable` | Design, redesign, shape, critique, audit, polish, or improve any frontend interface | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
+| `high-end-visual-design` | Teaches the AI to design like a high-end agency with exact fonts, spacing, shadows, and animations | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 | `ui-design-system` | UI design system toolkit: design token generation, component documentation, responsive design | — |
-| `canvas-design` | Create beautiful visual art in .png and .pdf documents using design philosophy | — |
-| `algorithmic-art` | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration | — |
-| `image-to-code` | Elite website image-to-code skill — generate design images, analyze them, then implement | — |
-| `image-to-code-skill` | Elite website image-to-code skill for Codex | — |
+| `canvas-design` | Create beautiful visual art in .png and .pdf documents using design philosophy | [anthropics/skills](https://github.com/anthropics/skills) |
+| `algorithmic-art` | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration | [anthropics/skills](https://github.com/anthropics/skills) |
+| `image-to-code` | Elite website image-to-code skill — generate design images, analyze them, then implement | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `image-to-code-skill` | Elite website image-to-code skill for Codex | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 | `imagegen-frontend-web` | Elite frontend image-direction skill for generating premium, conversion-aware website design references | — |
 | `imagegen-frontend-mobile` | Elite mobile app image-generation skill for creating premium, app-native screen concepts | — |
 | `landing-page-generator` | Generates high-converting landing pages as complete Next.js/React components with Tailwind CSS | — |
-| `web-artifacts-builder` | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts | — |
-| `theme-factory` | Toolkit for styling artifacts with 10 pre-set themes with colors/fonts | — |
-| `gpt-taste` | Elite UX/UI & Advanced GSAP Motion Engineer with strict AIDA page structure | — |
-| `gpt-tasteskill` | Elite UX/UI & Advanced GSAP Motion Engineer | — |
-| `design-taste-frontend` | Senior UI/UX Engineer enforcing metric-based rules and strict component architecture | — |
-| `taste-skill` | Senior UI/UX Engineer overriding default LLM biases | — |
+| `web-artifacts-builder` | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts | [anthropics/skills](https://github.com/anthropics/skills) |
+| `theme-factory` | Toolkit for styling artifacts with 10 pre-set themes with colors/fonts | [anthropics/skills](https://github.com/anthropics/skills) |
+| `gpt-taste` | Elite UX/UI & Advanced GSAP Motion Engineer with strict AIDA page structure | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `gpt-tasteskill` | Elite UX/UI & Advanced GSAP Motion Engineer | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `design-taste-frontend` | Senior UI/UX Engineer enforcing metric-based rules and strict component architecture | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `taste-skill` | Senior UI/UX Engineer overriding default LLM biases | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 | `stitch-design-taste` | Semantic Design System Skill for Google Stitch — generates DESIGN.md files | [labs.google.com/stitch](https://labs.google.com/stitch) |
 | `stitch-skill` | Semantic Design System Skill for Google Stitch | [labs.google.com/stitch](https://labs.google.com/stitch) |
-| `minimalist-skill` | Clean editorial-style interfaces with warm monochrome palette and typographic contrast | — |
-| `minimalist-ui` | Clean editorial-style interfaces | — |
-| `brutalist-skill` | Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics | — |
-| `industrial-brutalist-ui` | Raw mechanical interfaces for data-heavy dashboards and editorial sites | — |
-| `redesign-skill` | Upgrades existing websites and apps to premium quality | — |
-| `redesign-existing-projects` | Upgrades existing websites and apps without breaking functionality | — |
-| `soft-skill` | Teaches the AI to design like a high-end agency | — |
+| `minimalist-skill` | Clean editorial-style interfaces with warm monochrome palette and typographic contrast | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `minimalist-ui` | Clean editorial-style interfaces | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `brutalist-skill` | Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `industrial-brutalist-ui` | Raw mechanical interfaces for data-heavy dashboards and editorial sites | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `redesign-skill` | Upgrades existing websites and apps to premium quality | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `redesign-existing-projects` | Upgrades existing websites and apps without breaking functionality | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `soft-skill` | Teaches the AI to design like a high-end agency | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 | `ux-researcher-designer` | UX research and design toolkit: persona generation, journey mapping, usability testing | — |
 | `full-page-screenshot` | Capture full-page screenshots of web pages via Chrome DevTools Protocol | — |
-| `webapp-testing` | Toolkit for interacting with and testing local web applications using Playwright | — |
+| `webapp-testing` | Toolkit for interacting with and testing local web applications using Playwright | [anthropics/skills](https://github.com/anthropics/skills) |
 | `browser-automation` | Automate browser tasks: scrape websites, fill forms, capture screenshots | — |
-| `webgpu-threejs-tsl` | Comprehensive guide for WebGPU-enabled Three.js applications using TSL | — |
+| `webgpu-threejs-tsl` | Comprehensive guide for WebGPU-enabled Three.js applications using TSL | [dgreenheck/webgpu-claude-skill](https://github.com/dgreenheck/webgpu-claude-skill) |
 
 ### ⚙️ Engineering & Architecture
 
@@ -67,7 +67,7 @@ A collection of Claude Code skills, settings, and configurations.
 | `database-schema-designer` | Create ERD diagrams, normalize database schemas, design table relationships | — |
 | `sql-database-assistant` | Write SQL queries, optimize database performance, generate migrations | — |
 | `rag-architect` | Design RAG pipelines, optimize retrieval strategies, implement vector search | — |
-| `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers | — |
+| `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers | [anthropics/skills](https://github.com/anthropics/skills) |
 | `mcp-server-builder` | Design and ship production-ready MCP servers from OpenAPI contracts | — |
 | `spec-driven-workflow` | Write specs before code, define acceptance criteria, plan features | — |
 | `spec-to-repo` | Turn natural-language project specifications into complete, runnable repositories | — |
@@ -85,7 +85,7 @@ A collection of Claude Code skills, settings, and configurations.
 | `ab-test-setup` | Plan, design, or implement A/B tests and experiments | — |
 | `engineering-skills` | 23 engineering agent skills: architecture, frontend, backend, QA, DevOps, security | — |
 | `engineering-advanced-skills` | 25 advanced engineering skills: agent design, RAG, MCP servers, CI/CD, observability | — |
-| `claude-api` | Build, debug, and optimize Claude API / Anthropic SDK apps with prompt caching | — |
+| `claude-api` | Build, debug, and optimize Claude API / Anthropic SDK apps with prompt caching | [anthropics/skills](https://github.com/anthropics/skills) |
 
 ### ☁️ Cloud & Infrastructure
 
@@ -269,13 +269,13 @@ A collection of Claude Code skills, settings, and configurations.
 | `context-engine` | Load and manage company context for all C-suite advisor skills | — |
 | `self-eval` | Honestly evaluate AI work quality using a two-axis scoring system | — |
 | `output-skill` | Override default LLM truncation, enforce complete code generation | — |
-| `full-output-enforcement` | Override default LLM truncation behavior | — |
+| `full-output-enforcement` | Override default LLM truncation behavior | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 
 ### 🛠️ Developer Tools & Workflow
 
 | Skill | Description | Link |
 |-------|-------------|------|
-| `skill-creator` | Create new skills, modify and improve existing skills | — |
+| `skill-creator` | Create new skills, modify and improve existing skills | [anthropics/skills](https://github.com/anthropics/skills) |
 | `skill-tester` | Validate, test, and score the quality of skills | — |
 | `skill-security-auditor` | Security audit skills within the claude-skills ecosystem | [github.com/user/repo](https://github.com/user/repo) |
 | `command-guide` | Guide for Claude Code commands | — |
@@ -289,6 +289,47 @@ A collection of Claude Code skills, settings, and configurations.
 | `atlassian-admin` | Atlassian admin for Jira, Confluence, Bitbucket, Trello | — |
 | `atlassian-templates` | Jira and Confluence template creator/modifier | — |
 | `pm-skills` | 6 project management skills: senior PM, scrum master, Jira, Confluence | — |
+
+---
+
+## Skills Sources
+
+Skills in this collection were sourced from the following repositories:
+
+### 1. Anthropic Official (11 skills)
+https://github.com/anthropics/skills
+
+`algorithmic-art` · `brand-guidelines` · `canvas-design` · `claude-api` · `frontend-design` · `mcp-builder` · `skill-creator` · `theme-factory` · `web-artifacts-builder` · `webapp-testing` · `frontend-developer`
+
+### 2. alirezarezvani/claude-skills (204 skills)
+https://github.com/alirezarezvani/claude-skills
+
+Engineering, product, marketing, finance, C-level, compliance, security, DevOps, senior roles, and more.
+
+### 3. Leonxlnx/taste-skill (12 skills)
+https://github.com/Leonxlnx/taste-skill
+
+`taste-skill` · `design-taste-frontend` · `gpt-taste` · `high-end-visual-design` · `minimalist-ui` · `industrial-brutalist-ui` · `redesign-existing-projects` · `image-to-code` · `soft-skill` · `brutalist-skill` · `stitch-design-taste` · `full-output-enforcement`
+
+### 4. pbakaus/impeccable (1 skill, 18 commands)
+https://github.com/pbakaus/impeccable
+
+`impeccable` (/audit /polish /animate /colorize /bolder /typeset...)
+
+### 5. dgreenheck/webgpu-claude-skill (1 skill)
+https://github.com/dgreenheck/webgpu-claude-skill
+
+`webgpu-threejs-tsl`
+
+### 6. mathewgeejo/agent-skills (1 skill)
+https://github.com/mathewgeejo/agent-skills
+
+`frontend-developer`
+
+### 7. nextlevelbuilder/ui-ux-pro-max-skill (1 skill)
+https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+
+`ui-ux-pro-max`
 
 ---
 
