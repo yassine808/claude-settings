@@ -1,336 +1,318 @@
-# Claude Settings
+# ⚙️ Claude Settings
 
-A collection of Claude Code skills, settings, and configurations.
+<p align="center">
+  <strong>A curated collection of Claude Code skills, settings, and configurations.</strong><br>
+  <sub>237 skills · 7 sources · 12 categories</sub>
+</p>
 
-## Skills
+---
 
-### 🎨 Design & Frontend
+## 📦 Skills Sources
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `frontend-design` | Create distinctive, production-grade frontend interfaces with high design quality | [anthropics/skills](https://github.com/anthropics/skills) |
-| `frontend-developer` | Build React components, implement responsive layouts, and handle client-side state management | [anthropics/skills](https://github.com/anthropics/skills) · [mathewgeejo/agent-skills](https://github.com/mathewgeejo/agent-skills) |
-| `senior-frontend` | Frontend development skill for React, Next.js, TypeScript, and Tailwind CSS applications | — |
-| `senior-fullstack` | Fullstack development toolkit with project scaffolding for Next.js, FastAPI, MERN, and Django stacks | — |
-| `impeccable` | Design, redesign, shape, critique, audit, polish, or improve any frontend interface | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
-| `high-end-visual-design` | Teaches the AI to design like a high-end agency with exact fonts, spacing, shadows, and animations | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `ui-design-system` | UI design system toolkit: design token generation, component documentation, responsive design | — |
-| `canvas-design` | Create beautiful visual art in .png and .pdf documents using design philosophy | [anthropics/skills](https://github.com/anthropics/skills) |
-| `algorithmic-art` | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration | [anthropics/skills](https://github.com/anthropics/skills) |
-| `image-to-code` | Elite website image-to-code skill — generate design images, analyze them, then implement | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `image-to-code-skill` | Elite website image-to-code skill for Codex | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `imagegen-frontend-web` | Elite frontend image-direction skill for generating premium, conversion-aware website design references | — |
-| `imagegen-frontend-mobile` | Elite mobile app image-generation skill for creating premium, app-native screen concepts | — |
-| `landing-page-generator` | Generates high-converting landing pages as complete Next.js/React components with Tailwind CSS | — |
-| `web-artifacts-builder` | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts | [anthropics/skills](https://github.com/anthropics/skills) |
-| `theme-factory` | Toolkit for styling artifacts with 10 pre-set themes with colors/fonts | [anthropics/skills](https://github.com/anthropics/skills) |
-| `gpt-taste` | Elite UX/UI & Advanced GSAP Motion Engineer with strict AIDA page structure | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `gpt-tasteskill` | Elite UX/UI & Advanced GSAP Motion Engineer | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `design-taste-frontend` | Senior UI/UX Engineer enforcing metric-based rules and strict component architecture | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `taste-skill` | Senior UI/UX Engineer overriding default LLM biases | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `stitch-design-taste` | Semantic Design System Skill for Google Stitch — generates DESIGN.md files | [labs.google.com/stitch](https://labs.google.com/stitch) |
-| `stitch-skill` | Semantic Design System Skill for Google Stitch | [labs.google.com/stitch](https://labs.google.com/stitch) |
-| `minimalist-skill` | Clean editorial-style interfaces with warm monochrome palette and typographic contrast | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+Skills in this collection were curated from the following repositories:
+
+| # | Source | Skills | Description |
+|---|--------|--------|-------------|
+| 1 | **[anthropics/skills](https://github.com/anthropics/skills)** | 11 | Official Anthropic skills: `algorithmic-art` · `brand-guidelines` · `canvas-design` · `claude-api` · `frontend-design` · `mcp-builder` · `skill-creator` · `theme-factory` · `web-artifacts-builder` · `webapp-testing` · `frontend-developer` |
+| 2 | **[alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills)** | ~204 | Engineering, product, marketing, finance, C-level, compliance, security, DevOps, senior roles, and more |
+| 3 | **[Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill)** | 12 | Design taste & UI engineering: `taste-skill` · `design-taste-frontend` · `gpt-taste` · `high-end-visual-design` · `minimalist-ui` · `industrial-brutalist-ui` · `redesign-existing-projects` · `image-to-code` · `soft-skill` · `brutalist-skill` · `stitch-design-taste` · `full-output-enforcement` |
+| 4 | **[pbakaus/impeccable](https://github.com/pbakaus/impeccable)** | 1 | `impeccable` — 18 commands: /audit /polish /animate /colorize /bolder /typeset... |
+| 5 | **[dgreenheck/webgpu-claude-skill](https://github.com/dgreenheck/webgpu-claude-skill)** | 1 | `webgpu-threejs-tsl` — WebGPU + Three.js TSL shaders |
+| 6 | **[mathewgeejo/agent-skills](https://github.com/mathewgeejo/agent-skills)** | 1 | `frontend-developer` |
+| 7 | **[nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)** | 1 | `ui-ux-pro-max` |
+
+---
+
+## 🎨 Skills
+
+### Design & Frontend
+
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `frontend-design` | Production-grade frontend interfaces with high design quality | [anthropics/skills](https://github.com/anthropics/skills) |
+| `frontend-developer` | React components, responsive layouts, client-side state | [anthropics/skills](https://github.com/anthropics/skills) · [mathewgeejo/agent-skills](https://github.com/mathewgeejo/agent-skills) |
+| `senior-frontend` | React, Next.js, TypeScript, Tailwind CSS development | — |
+| `senior-fullstack` | Fullstack scaffolding: Next.js, FastAPI, MERN, Django | — |
+| `impeccable` | Design, critique, audit, polish any frontend interface | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
+| `high-end-visual-design` | Design like a high-end agency — fonts, spacing, shadows | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `ui-design-system` | Design tokens, component documentation, responsive design | — |
+| `canvas-design` | Visual art in .png and .pdf using design philosophy | [anthropics/skills](https://github.com/anthropics/skills) |
+| `algorithmic-art` | Algorithmic art with p5.js, seeded randomness | [anthropics/skills](https://github.com/anthropics/skills) |
+| `image-to-code` | Generate design images, analyze, then implement | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `image-to-code-skill` | Image-to-code for Codex | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `imagegen-frontend-web` | Premium conversion-aware website design references | — |
+| `imagegen-frontend-mobile` | Premium mobile app screen concepts and flows | — |
+| `landing-page-generator` | High-converting landing pages with Next.js/React | — |
+| `web-artifacts-builder` | Multi-component claude.ai HTML artifacts | [anthropics/skills](https://github.com/anthropics/skills) |
+| `theme-factory` | 10 pre-set themes with colors/fonts | [anthropics/skills](https://github.com/anthropics/skills) |
+| `gpt-taste` | UX/UI & GSAP Motion Engineer, strict AIDA structure | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `gpt-tasteskill` | UX/UI & Advanced GSAP Motion Engineer | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `design-taste-frontend` | Metric-based rules, strict component architecture | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `taste-skill` | Override default LLM design biases | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `stitch-design-taste` | Design System Skill for Google Stitch | [labs.google.com/stitch](https://labs.google.com/stitch) |
+| `stitch-skill` | Semantic Design System for Google Stitch | [labs.google.com/stitch](https://labs.google.com/stitch) |
+| `minimalist-skill` | Clean editorial interfaces, warm monochrome palette | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 | `minimalist-ui` | Clean editorial-style interfaces | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `brutalist-skill` | Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `industrial-brutalist-ui` | Raw mechanical interfaces for data-heavy dashboards and editorial sites | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `redesign-skill` | Upgrades existing websites and apps to premium quality | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `redesign-existing-projects` | Upgrades existing websites and apps without breaking functionality | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `soft-skill` | Teaches the AI to design like a high-end agency | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-| `ux-researcher-designer` | UX research and design toolkit: persona generation, journey mapping, usability testing | — |
-| `full-page-screenshot` | Capture full-page screenshots of web pages via Chrome DevTools Protocol | — |
-| `webapp-testing` | Toolkit for interacting with and testing local web applications using Playwright | [anthropics/skills](https://github.com/anthropics/skills) |
-| `browser-automation` | Automate browser tasks: scrape websites, fill forms, capture screenshots | — |
-| `webgpu-threejs-tsl` | Comprehensive guide for WebGPU-enabled Three.js applications using TSL | [dgreenheck/webgpu-claude-skill](https://github.com/dgreenheck/webgpu-claude-skill) |
+| `brutalist-skill` | Raw mechanical interfaces, Swiss typography, military aesthetics | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `industrial-brutalist-ui` | Raw mechanical interfaces for dashboards and editorial | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `redesign-skill` | Upgrade websites and apps to premium quality | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `redesign-existing-projects` | Upgrade existing projects without breaking functionality | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `soft-skill` | Design like a high-end agency | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| `ux-researcher-designer` | Persona generation, journey mapping, usability testing | — |
+| `full-page-screenshot` | Full-page screenshots via Chrome DevTools Protocol | — |
+| `webapp-testing` | Test local web applications using Playwright | [anthropics/skills](https://github.com/anthropics/skills) |
+| `browser-automation` | Scrape, fill forms, capture screenshots | — |
+| `webgpu-threejs-tsl` | WebGPU + Three.js TSL shaders and compute | [dgreenheck/webgpu-claude-skill](https://github.com/dgreenheck/webgpu-claude-skill) |
 
-### ⚙️ Engineering & Architecture
+### Engineering & Architecture
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `senior-architect` | Design system architecture, evaluate microservices vs monolith, create architecture diagrams | — |
-| `senior-backend` | Design and implement backend systems: REST APIs, microservices, database architectures | — |
-| `senior-devops` | Comprehensive DevOps skill for CI/CD, infrastructure automation, containerization | — |
-| `senior-data-engineer` | Data engineering skill for building scalable data pipelines, ETL/ELT systems | — |
-| `senior-data-scientist` | Statistical modeling, experiment design, causal inference, and predictive analytics | — |
-| `senior-ml-engineer` | ML engineering for productionizing models, building MLOps pipelines | — |
-| `senior-computer-vision` | Computer vision engineering: object detection, image segmentation, visual AI systems | — |
-| `senior-qa` | Generate unit tests, integration tests, and E2E tests for React/Next.js applications | — |
-| `senior-pm` | Senior Project Manager for enterprise software with quantitative risk analysis | — |
-| `senior-prompt-engineer` | Optimize prompts, design prompt templates, evaluate LLM outputs | — |
-| `code-reviewer` | Code review automation for TypeScript, JavaScript, Python, Go, Swift, Kotlin | — |
-| `pr-review-expert` | Review pull requests, analyze code changes, check for security issues | — |
-| `codebase-onboarding` | Analyze a codebase and generate onboarding documentation | — |
-| `tdd-guide` | Test-driven development skill for writing unit tests and guiding red-green-refactor workflows | — |
-| `api-design-reviewer` | Comprehensive REST API design review with linting and breaking-change detection | — |
-| `api-test-suite-builder` | Generate API tests, create integration test suites, test REST endpoints | — |
-| `database-designer` | Design database schemas, plan data migrations, optimize queries | — |
-| `database-schema-designer` | Create ERD diagrams, normalize database schemas, design table relationships | — |
-| `sql-database-assistant` | Write SQL queries, optimize database performance, generate migrations | — |
-| `rag-architect` | Design RAG pipelines, optimize retrieval strategies, implement vector search | — |
-| `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers | [anthropics/skills](https://github.com/anthropics/skills) |
-| `mcp-server-builder` | Design and ship production-ready MCP servers from OpenAPI contracts | — |
-| `spec-driven-workflow` | Write specs before code, define acceptance criteria, plan features | — |
-| `spec-to-repo` | Turn natural-language project specifications into complete, runnable repositories | — |
-| `focused-fix` | Systematic deep-dive repair across all files and dependencies | — |
-| `dependency-auditor` | Audit and manage dependencies across multi-language projects | — |
-| `tech-debt-tracker` | Scan codebases for technical debt and generate prioritized remediation plans | — |
-| `tech-stack-evaluator` | Technology stack evaluation with TCO analysis and security assessment | — |
-| `performance-profiler` | Systematic performance profiling for Node.js, Python, and Go applications | — |
-| `changelog-generator` | Produce consistent, auditable release notes from Conventional Commits | — |
-| `release-manager` | Plan releases, manage changelogs, coordinate deployments | — |
-| `git-worktree-manager` | Run parallel feature work safely with Git worktrees | — |
-| `monorepo-navigator` | Navigate, manage, and optimize monorepos (Turborepo, Nx, pnpm workspaces) | — |
-| `migration-architect` | Zero-downtime migration planning with rollback strategy generation | — |
-| `experiment-designer` | Plan product experiments with testable hypotheses and sample size estimation | — |
-| `ab-test-setup` | Plan, design, or implement A/B tests and experiments | — |
-| `engineering-skills` | 23 engineering agent skills: architecture, frontend, backend, QA, DevOps, security | — |
-| `engineering-advanced-skills` | 25 advanced engineering skills: agent design, RAG, MCP servers, CI/CD, observability | — |
-| `claude-api` | Build, debug, and optimize Claude API / Anthropic SDK apps with prompt caching | [anthropics/skills](https://github.com/anthropics/skills) |
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `senior-architect` | System architecture, microservices vs monolith, ADRs | — |
+| `senior-backend` | REST APIs, microservices, database architectures | — |
+| `senior-devops` | CI/CD, infrastructure automation, containerization | — |
+| `senior-data-engineer` | Data pipelines, ETL/ELT systems, data infrastructure | — |
+| `senior-data-scientist` | Statistical modeling, causal inference, predictive analytics | — |
+| `senior-ml-engineer` | Production ML, MLOps pipelines, model deployment | — |
+| `senior-computer-vision` | Object detection, image segmentation, visual AI | — |
+| `senior-qa` | Unit, integration, and E2E tests for React/Next.js | — |
+| `senior-pm` | Enterprise project management, quantitative risk analysis | — |
+| `senior-prompt-engineer` | Optimize prompts, design templates, evaluate LLM outputs | — |
+| `code-reviewer` | Code review automation for TS, JS, Python, Go, Swift, Kotlin | — |
+| `pr-review-expert` | Review PRs, analyze changes, check security issues | — |
+| `codebase-onboarding` | Analyze codebases, generate onboarding documentation | — |
+| `tdd-guide` | Test-driven development, red-green-refactor workflows | — |
+| `api-design-reviewer` | REST API design review, linting, breaking-change detection | — |
+| `api-test-suite-builder` | API tests, integration test suites, contract tests | — |
+| `database-designer` | Schema design, migrations, query optimization | — |
+| `database-schema-designer` | ERD diagrams, normalization, table relationships | — |
+| `sql-database-assistant` | SQL queries, performance optimization, migrations | — |
+| `rag-architect` | RAG pipelines, retrieval strategies, vector search | — |
+| `mcp-builder` | High-quality MCP (Model Context Protocol) servers | [anthropics/skills](https://github.com/anthropics/skills) |
+| `mcp-server-builder` | Production-ready MCP servers from OpenAPI contracts | — |
+| `spec-driven-workflow` | Specs before code, acceptance criteria | — |
+| `spec-to-repo` | Natural-language specs → runnable repositories | — |
+| `focused-fix` | Systematic deep-dive repair across all dependencies | — |
+| `dependency-auditor` | Audit dependencies, CVE investigation, license review | — |
+| `tech-debt-tracker` | Scan codebases for technical debt, remediation plans | — |
+| `tech-stack-evaluator` | TCO analysis, security assessment, ecosystem scoring | — |
+| `performance-profiler` | Node.js, Python, Go profiling, flamegraphs, load tests | — |
+| `changelog-generator` | Release notes from Conventional Commits | — |
+| `release-manager` | Release planning, changelogs, deployment coordination | — |
+| `git-worktree-manager` | Parallel feature work with Git worktrees | — |
+| `monorepo-navigator` | Turborepo, Nx, pnpm workspaces optimization | — |
+| `migration-architect` | Zero-downtime migrations with rollback strategies | — |
+| `experiment-designer` | Product experiments, hypotheses, sample sizing | — |
+| `ab-test-setup` | A/B tests, split tests, multivariate experiments | — |
+| `engineering-skills` | 23 engineering agent skills bundle | — |
+| `engineering-advanced-skills` | 25 advanced engineering skills bundle | — |
+| `claude-api` | Claude API / Anthropic SDK apps with prompt caching | [anthropics/skills](https://github.com/anthropics/skills) |
 
-### ☁️ Cloud & Infrastructure
+### Cloud & Infrastructure
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `aws-solution-architect` | Design AWS architectures using serverless patterns and IaC templates | — |
-| `azure-cloud-architect` | Design Azure architectures with Bicep/ARM templates | — |
-| `gcp-cloud-architect` | Design GCP architectures: GKE, Cloud Run, BigQuery pipelines | — |
-| `kubernetes-operator` | Build Kubernetes Operators — custom controllers that reconcile CRD state | — |
-| `ci-cd-pipeline-builder` | Generate pragmatic CI/CD pipelines from detected project stack signals | — |
-| `observability-designer` | Design production-ready observability strategies with SLI/SLO design | — |
-| `slo-architect` | Define, review, or operate SLOs/SLIs/error budgets | — |
-| `chaos-engineering` | Plan, run, and learn from chaos engineering experiments | — |
-| `feature-flags-architect` | Add, retire, or audit feature flags with progressive delivery | — |
-| `runbook-generator` | Generate operational runbooks: deployment, incident response, maintenance | — |
-| `incident-commander` | Comprehensive incident response framework from detection through resolution | — |
-| `env-secrets-manager` | Manage environment-variable hygiene and secrets safety | — |
-| `secrets-vault-manager` | Set up secret management with HashiCorp Vault, AWS Secrets Manager, etc. | — |
-| `ms365-tenant-manager` | Microsoft 365 tenant administration and automation | — |
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `aws-solution-architect` | AWS serverless, CloudFormation, Lambda, DynamoDB | — |
+| `azure-cloud-architect` | Azure Bicep/ARM, AKS, Functions, Cosmos DB | — |
+| `gcp-cloud-architect` | GCP GKE, Cloud Run, BigQuery, Cloud Functions | — |
+| `kubernetes-operator` | Kubernetes Operators, CRDs, reconcile loops | — |
+| `ci-cd-pipeline-builder` | CI/CD pipelines from detected project stack | — |
+| `observability-designer` | Metrics, logs, traces, SLI/SLO design | — |
+| `slo-architect` | SLOs/SLIs, error budgets, burn-rate alerts | — |
+| `chaos-engineering` | Chaos experiments, fault injection, gamedays | — |
+| `feature-flags-architect` | Feature flags, progressive delivery, kill switches | — |
+| `runbook-generator` | Operational runbooks: deploy, incident, maintenance | — |
+| `incident-commander` | Incident response framework, severity classification | — |
+| `env-secrets-manager` | Environment-variable hygiene and secrets safety | — |
+| `secrets-vault-manager` | HashiCorp Vault, AWS Secrets Manager integration | — |
+| `ms365-tenant-manager` | Microsoft 365 tenant administration | — |
 
-### 🔒 Security
+### Security
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `senior-security` | Security engineering toolkit: threat modeling, vulnerability analysis, secure architecture | — |
-| `senior-secops` | Application security, vulnerability management, compliance verification | — |
-| `security-pen-testing` | Security audits, penetration testing, OWASP Top 10 checks | — |
-| `cloud-security` | Assess cloud infrastructure for security misconfigurations (AWS, Azure, GCP) | — |
-| `ai-security` | Assess AI/ML systems for prompt injection, jailbreak, model inversion risk | — |
-| `incident-response` | Security incident classification, triage, escalation, and forensic evidence collection | — |
-| `threat-detection` | Hunt for threats, analyze IOCs, detect behavioral anomalies | — |
-| `red-team` | Authorized red team engagements and offensive security simulations | — |
-| `adversarial-reviewer` | Adversarial code review with hostile reviewer personas | — |
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `senior-security` | Threat modeling, vulnerability analysis, secure architecture | — |
+| `senior-secops` | App security, vulnerability management, compliance | — |
+| `security-pen-testing` | Penetration testing, OWASP Top 10, security audits | — |
+| `cloud-security` | Cloud misconfigurations (AWS, Azure, GCP), IAM | — |
+| `ai-security` | Prompt injection, jailbreak, model inversion risk | — |
+| `incident-response` | Security incident classification, triage, forensics | — |
+| `threat-detection` | Threat hunting, IOC analysis, anomaly detection | — |
+| `red-team` | Red team engagements, attack path analysis | — |
+| `adversarial-reviewer` | Adversarial code review with hostile personas | — |
 
-### 📈 Marketing & Growth
+### Marketing & Growth
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `marketing-skills` | 42 marketing agent skills: content, SEO, CRO, channels, growth, intelligence | — |
-| `marketing-ops` | Central router for the marketing skill ecosystem | — |
-| `marketing-context` | Create and maintain marketing context documents | — |
-| `marketing-strategy-pmm` | Product marketing: positioning, GTM strategy, competitive intelligence | — |
-| `marketing-demand-acquisition` | Demand generation campaigns across LinkedIn, Google, and Meta | — |
-| `marketing-ideas` | 139 proven marketing approaches organized by category | — |
-| `marketing-psychology` | 70+ mental models organized for marketing application | — |
-| `content-production` | Full content production pipeline — blog posts, articles, guides | — |
-| `content-strategy` | Plan content strategy, decide what content to create | — |
-| `content-creator` | Deprecated redirect to content-production or content-strategy | — |
-| `content-humanizer` | Make AI-generated content sound genuinely human | — |
-| `copywriting` | Write, rewrite, or improve marketing copy for any page | — |
-| `copy-editing` | Edit, review, or improve existing marketing copy | — |
-| `cold-email` | Write B2B cold outreach emails and follow-up sequences | — |
-| `email-sequence` | Create or optimize email sequences, drip campaigns, lifecycle emails | — |
-| `email-template-builder` | Build complete transactional email systems with React Email | — |
-| `paid-ads` | Paid advertising campaigns on Google Ads, Meta, LinkedIn, Twitter/X | — |
-| `ad-creative` | Generate, iterate, or scale ad creative for paid advertising | — |
-| `campaign-analytics` | Analyze campaign performance with multi-touch attribution and ROI | — |
-| `analytics-tracking` | Set up, audit, and debug analytics tracking (GA4, GTM) | — |
-| `product-analytics` | Define product KPIs, build metric dashboards, run cohort analysis | — |
-| `seo-audit` | Audit, review, or diagnose SEO issues on your site | — |
-| `ai-seo` | Optimize content to get cited by AI search engines | — |
-| `programmatic-seo` | Create SEO-driven pages at scale using templates and data | — |
-| `schema-markup` | Implement, audit, or validate structured data (schema.org, JSON-LD) | — |
-| `site-architecture` | Audit, redesign, or plan website structure and URL hierarchy | — |
-| `competitor-alternatives` | Create competitor comparison or alternative pages for SEO | — |
-| `social-content` | Create, schedule, or optimize social media content | — |
-| `social-media-manager` | Develop social media strategy, plan content calendars | — |
-| `social-media-analyzer` | Social media campaign analysis and performance tracking | — |
-| `x-twitter-growth` | X/Twitter growth engine for building audience and crafting viral content | — |
-| `referral-program` | Design, launch, or optimize referral or affiliate programs | — |
-| `free-tool-strategy` | Build a free tool for marketing — lead generation, SEO value | — |
-| `launch-strategy` | Plan product launches, feature announcements, or release strategy | — |
-| `intl-expansion` | International market expansion strategy and localization | — |
-| `app-store-optimization` | ASO toolkit for Apple App Store and Google Play Store | — |
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `marketing-skills` | 42 marketing agent skills bundle | — |
+| `marketing-ops` | Marketing ecosystem orchestration router | — |
+| `marketing-context` | Brand voice, target audience, ICP context | — |
+| `marketing-strategy-pmm` | Product marketing, positioning, GTM strategy | — |
+| `marketing-demand-acquisition` | Demand gen: LinkedIn, Google, Meta campaigns | — |
+| `marketing-ideas` | 139 proven marketing approaches | — |
+| `marketing-psychology` | 70+ mental models for marketing | — |
+| `content-production` | Blog posts, articles, guides end-to-end | — |
+| `content-strategy` | Content planning, topic clusters, editorial calendar | — |
+| `content-creator` | Redirect to content-production or content-strategy | — |
+| `content-humanizer` | Make AI-generated content sound human | — |
+| `copywriting` | Marketing copy for any page | — |
+| `copy-editing` | Edit, review, improve existing copy | — |
+| `cold-email` | B2B cold outreach emails and sequences | — |
+| `email-sequence` | Drip campaigns, lifecycle emails, nurture sequences | — |
+| `email-template-builder` | Transactional emails with React Email | — |
+| `paid-ads` | Google Ads, Meta, LinkedIn, Twitter/X campaigns | — |
+| `ad-creative` | Ad copy generation, headlines, variations | — |
+| `campaign-analytics` | Multi-touch attribution, ROI, funnel analysis | — |
+| `analytics-tracking` | GA4, GTM, event taxonomy, conversion tracking | — |
+| `product-analytics` | Product KPIs, dashboards, cohort analysis | — |
+| `seo-audit` | Technical SEO, on-page SEO, meta tags | — |
+| `ai-seo` | Optimize for AI search engines (ChatGPT, Perplexity) | — |
+| `programmatic-seo` | SEO pages at scale with templates | — |
+| `schema-markup` | Structured data, JSON-LD, schema.org | — |
+| `site-architecture` | URL structure, navigation, internal linking | — |
+| `competitor-alternatives` | Competitor comparison pages for SEO | — |
+| `social-content` | Social media content creation and scheduling | — |
+| `social-media-manager` | Social strategy, content calendars, community | — |
+| `social-media-analyzer` | Social campaign analysis and benchmarking | — |
+| `x-twitter-growth` | X/Twitter growth, viral content, threads | — |
+| `referral-program` | Referral and affiliate program design | — |
+| `free-tool-strategy` | Free tools for lead generation and SEO | — |
+| `launch-strategy` | Product launches, Product Hunt, GTM | — |
+| `intl-expansion` | International expansion, localization | — |
+| `app-store-optimization` | ASO for Apple App Store and Google Play | — |
 | `llms.txt` | Optimize content for LLM discoverability | — |
 
-### 🎯 Conversion Rate Optimization (CRO)
+### Conversion Rate Optimization
 
-| Skill | Description | Link |
-|-------|-------------|------|
+| Skill | Description | Source |
+|-------|-------------|--------|
 | `page-cro` | Optimize any marketing page for conversions | — |
-| `signup-flow-cro` | Optimize signup, registration, and trial activation flows | — |
-| `onboarding-cro` | Optimize post-signup onboarding and user activation | — |
-| `form-cro` | Optimize lead capture forms, contact forms, demo request forms | — |
-| `popup-cro` | Create or optimize popups, modals, overlays for conversion | — |
-| `paywall-upgrade-cro` | Create or optimize in-app paywalls and upgrade screens | — |
-| `churn-prevention` | Reduce churn through cancel flow design, save offers, dunning sequences | — |
-| `pricing-strategy` | Design, optimize, and communicate SaaS pricing | — |
+| `signup-flow-cro` | Signup, registration, trial activation flows | — |
+| `onboarding-cro` | Post-signup onboarding, activation, time-to-value | — |
+| `form-cro` | Lead capture, contact, demo request forms | — |
+| `popup-cro` | Popups, modals, overlays, exit intent | — |
+| `paywall-upgrade-cro` | In-app paywalls, upgrade screens, upsell modals | — |
+| `churn-prevention` | Cancel flows, save offers, dunning sequences | — |
+| `pricing-strategy` | SaaS pricing tiers, value metrics, price increases | — |
 
-### 🏢 Business & Strategy
+### Business & Strategy
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `c-level-skills` | 10 C-level advisory skills: CEO, CTO, COO, CPO, CMO, CFO, CRO, CISO, CHRO | — |
-| `business-growth-skills` | 4 business growth skills: customer success, sales engineer, revenue ops, contracts | — |
-| `ceo-advisor` | Executive leadership guidance for strategic decision-making | — |
-| `cto-advisor` | Technical leadership guidance for engineering teams and architecture | — |
-| `coo-advisor` | Operations leadership: process design, OKR execution, scaling playbooks | — |
-| `cfo-advisor` | Financial leadership: modeling, unit economics, fundraising strategy | — |
-| `cmo-advisor` | Marketing leadership: brand positioning, growth model design | — |
-| `cro-advisor` | Revenue leadership: forecasting, sales model design, pricing strategy | — |
-| `cpo-advisor` | Product leadership: vision, portfolio strategy, product-market fit | — |
-| `ciso-advisor` | Security leadership: risk quantification, compliance roadmap | — |
-| `chro-advisor` | People leadership: hiring strategy, compensation, org structure | — |
-| `chief-ai-officer-advisor` | AI strategy: build-vs-buy decisions, AI risk classification | — |
-| `chief-customer-officer-advisor` | Retention strategy, customer segmentation, CS team design | — |
-| `chief-data-officer-advisor` | Data strategy: training data rights, data product strategy | — |
-| `chief-of-staff` | C-suite orchestration layer, routes questions to right advisor | — |
-| `vpe-advisor` | VP of Engineering: delivery throughput, hiring funnel, team structure | — |
-| `founder-coach` | Personal leadership development for founders and first-time CEOs | — |
-| `company-os` | Meta-framework for how a company runs (EOS, Scaling Up, OKRs) | — |
-| `strategic-alignment` | Cascade strategy from boardroom to individual contributor | — |
-| `change-management` | Framework for rolling out organizational changes | — |
-| `culture-architect` | Build, measure, and evolve company culture as operational behavior | — |
-| `internal-narrative` | Build and maintain one coherent company story across all audiences | — |
-| `board-deck-builder` | Assemble comprehensive board and investor update decks | — |
-| `board-meeting` | Multi-agent board meeting protocol for strategic decisions | — |
-| `decision-logger` | Two-layer memory architecture for board meeting decisions | — |
-| `meeting-analyzer` | Analyze meeting transcripts for behavioral patterns and coaching feedback | [github.com/maximcoding](https://github.com/maximcoding) |
-| `team-communications` | Write internal company communications — 3P updates, newsletters, incident reports | [github.com/maximcoding](https://github.com/maximcoding) |
-| `interview-system-designer` | Design interview processes, hiring pipelines, competency matrices | — |
-| `competitive-intel` | Systematic competitor tracking for positioning and battlecards | — |
-| `competitive-teardown` | Analyze competitor products with feature comparison matrices and SWOT | — |
-| `ma-playbook` | M&A strategy: due diligence, valuation, integration | — |
-| `scenario-war-room` | Cross-functional what-if modeling for cascading multi-variable scenarios | — |
-| `org-health-diagnostic` | Cross-functional organizational health check across 8 dimensions | — |
-| `roadmap-communicator` | Prepare roadmap narratives and stakeholder updates | — |
-| `contract-and-proposal-writer` | Generate professional business documents: contracts, proposals, SOWs, NDAs | — |
-| `general-counsel-advisor` | Contract review, IP strategy, term sheet decoding, regulatory mapping | — |
-| `financial-analyst` | Financial ratio analysis, DCF valuation, budget variance, rolling forecasts | — |
-| `finance-skills` | Financial analyst agent skill: ratio analysis, DCF valuation, budget variance | — |
-| `saas-metrics-coach` | SaaS financial health advisor: ARR, MRR, churn, LTV, CAC, NRR | — |
-| `revenue-operations` | Sales pipeline health, revenue forecasting, GTM efficiency metrics | — |
-| `customer-success-manager` | Monitor customer health, predict churn risk, identify expansion opportunities | — |
-| `sales-engineer` | RFP/RFI responses, competitive feature matrices, POC planning | — |
-| `product-strategist` | Strategic product leadership: OKR cascade, quarterly planning, competitive analysis | — |
-| `product-manager-toolkit` | Comprehensive PM toolkit: RICE prioritization, PRD templates, discovery frameworks | — |
-| `product-discovery` | Validate product opportunities and test problem-solution fit | — |
-| `product-skills` | 10 product agent skills: PM toolkit, agile PO, UX researcher, UI design system | — |
-| `saas-scaffolder` | Generate complete SaaS project boilerplate with auth, billing, dashboard | — |
-| `stripe-integration-expert` | Production-grade Stripe integrations: subscriptions, webhooks, checkout | — |
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `c-level-skills` | 10 C-level advisory skills bundle | — |
+| `business-growth-skills` | Customer success, sales, revenue ops, contracts | — |
+| `ceo-advisor` | Executive leadership, strategy, board management | — |
+| `cto-advisor` | Technical leadership, architecture decisions, DORA | — |
+| `coo-advisor` | Operations, OKR execution, scaling playbooks | — |
+| `cfo-advisor` | Financial modeling, unit economics, fundraising | — |
+| `cmo-advisor` | Brand positioning, growth models, marketing org | — |
+| `cro-advisor` | Revenue forecasting, sales model, pricing strategy | — |
+| `cpo-advisor` | Product vision, portfolio strategy, PMF | — |
+| `ciso-advisor` | Security risk quantification, compliance roadmap | — |
+| `chro-advisor` | Hiring strategy, compensation, org design | — |
+| `chief-ai-officer-advisor` | AI build-vs-buy, risk classification, AI economics | — |
+| `chief-customer-officer-advisor` | Retention, segmentation, CS team design | — |
+| `chief-data-officer-advisor` | Data strategy, data products, M&A readiness | — |
+| `chief-of-staff` | C-suite orchestration, decision routing | — |
+| `vpe-advisor` | VP Engineering: delivery, hiring, team structure | — |
+| `founder-coach` | Founder leadership, delegation, burnout prevention | — |
+| `company-os` | Company operating system (EOS, Scaling Up, OKRs) | — |
+| `strategic-alignment` | Strategy cascade, silo detection, OKR alignment | — |
+| `change-management` | Organizational change, ADKAR, resistance patterns | — |
+| `culture-architect` | Company values, culture code, cultural rituals | — |
+| `internal-narrative` | Company story across all audiences | — |
+| `board-deck-builder` | Board and investor update decks | — |
+| `board-meeting` | Multi-agent board meeting protocol | — |
+| `decision-logger` | Board decision memory architecture | — |
+| `meeting-analyzer` | Meeting transcript analysis, coaching feedback | [github.com/maximcoding](https://github.com/maximcoding) |
+| `team-communications` | 3P updates, newsletters, incident reports | [github.com/maximcoding](https://github.com/maximcoding) |
+| `interview-system-designer` | Hiring pipelines, competency matrices, scoring | — |
+| `competitive-intel` | Competitor tracking, battlecards, positioning | — |
+| `competitive-teardown` | Competitor analysis, SWOT, feature matrices | — |
+| `ma-playbook` | M&A due diligence, valuation, integration | — |
+| `scenario-war-room` | Cross-functional what-if modeling | — |
+| `org-health-diagnostic` | 8-dimension organizational health check | — |
+| `roadmap-communicator` | Roadmap narratives, release notes, stakeholder updates | — |
+| `contract-and-proposal-writer` | Contracts, proposals, SOWs, NDAs | — |
+| `general-counsel-advisor` | Contract review, IP strategy, term sheet decoding | — |
+| `financial-analyst` | Ratio analysis, DCF valuation, budget variance | — |
+| `finance-skills` | Financial analyst agent skill bundle | — |
+| `saas-metrics-coach` | ARR, MRR, churn, LTV, CAC, NRR health check | — |
+| `revenue-operations` | Pipeline health, revenue forecasting, GTM efficiency | — |
+| `customer-success-manager` | Customer health scoring, churn prediction | — |
+| `sales-engineer` | RFP responses, feature matrices, POC planning | — |
+| `product-strategist` | OKR cascade, quarterly planning, competitive analysis | — |
+| `product-manager-toolkit` | RICE prioritization, PRD templates, discovery | — |
+| `product-discovery` | Validate opportunities, problem-solution fit | — |
+| `product-skills` | 10 product agent skills bundle | — |
+| `saas-scaffolder` | SaaS boilerplate: auth, billing, dashboard | — |
+| `stripe-integration-expert` | Stripe subscriptions, webhooks, checkout | — |
 
-### 🛡️ Compliance & Regulatory
+### Compliance & Regulatory
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `compliance-os` | Meta-orchestrator for multi-framework compliance programs | — |
-| `compliance-readiness` | Multi-framework compliance officer 6-question forcing interrogation | — |
-| `iso27001-audit-prep` | ISO 27001 ISMS audit readiness 6-question forcing interrogation | — |
-| `iso13485-audit-prep` | ISO 13485 QMS audit 6-question forcing interrogation | — |
-| `iso42001-specialist` | ISO/IEC 42001 AI Management System (AIMS) specialist | — |
-| `isms-audit-expert` | ISMS audit expert for ISO 27001 compliance verification | — |
-| `soc2-audit-prep` | SOC 2 Type II readiness 6-question forcing interrogation | — |
-| `soc2-compliance` | Prepare for SOC 2 audits, map Trust Service Criteria | — |
-| `gdpr-audit-prep` | GDPR audit 6-question Article-cited forcing interrogation | — |
-| `gdpr-dsgvo-expert` | GDPR and German DSGVO compliance automation | — |
-| `ai-act-readiness` | EU AI Act 6-question forcing interrogation | — |
-| `eu-ai-act-specialist` | EU AI Act operational compliance for compliance teams | — |
-| `fda-consultant-specialist` | FDA regulatory consultant: 510(k)/PMA/De Novo pathway guidance | — |
-| `fda-qsr-audit-prep` | FDA 21 CFR 820 (QSR / QMSR) audit 6-question forcing interrogation | — |
-| `mdr-745-specialist` | EU MDR 2017/745 compliance specialist for medical devices | — |
-| `aims-audit` | ISO/IEC 42001 AIMS internal-audit 6-question forcing interrogation | — |
-| `capa-officer` | CAPA system management for medical device QMS | — |
-| `qms-audit-expert` | ISO 13485 internal audit expertise for medical device QMS | — |
-| `quality-documentation-manager` | Document control system management for medical device QMS | — |
-| `quality-manager-qmr` | Senior Quality Manager Responsible Person (QMR) per ISO 13485 | — |
-| `quality-manager-qms-iso13485` | ISO 13485 QMS implementation and maintenance | — |
-| `risk-management-specialist` | Medical device risk management implementing ISO 14971 | — |
-| `regulatory-affairs-head` | Senior Regulatory Affairs Manager for FDA submissions and CE marking | — |
-| `ra-qm-skills` | 12 regulatory & QM agent skills: ISO 13485, MDR, FDA, ISO 27001, GDPR | — |
-| `information-security-manager-iso27001` | ISO 27001 ISMS implementation for HealthTech and MedTech | — |
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `compliance-os` | Multi-framework compliance orchestrator | — |
+| `compliance-readiness` | Multi-framework compliance interrogation | — |
+| `iso27001-audit-prep` | ISO 27001 ISMS audit readiness | — |
+| `iso13485-audit-prep` | ISO 13485 QMS audit preparation | — |
+| `iso42001-specialist` | ISO/IEC 42001 AI Management System | — |
+| `isms-audit-expert` | ISO 27001 compliance verification | — |
+| `soc2-audit-prep` | SOC 2 Type II readiness | — |
+| `soc2-compliance` | Trust Service Criteria, control matrices | — |
+| `gdpr-audit-prep` | GDPR audit, Article-cited interrogation | — |
+| `gdpr-dsgvo-expert` | GDPR/DSGVO compliance automation | — |
+| `ai-act-readiness` | EU AI Act compliance interrogation | — |
+| `eu-ai-act-specialist` | EU AI Act operational compliance | — |
+| `fda-consultant-specialist` | FDA 510(k)/PMA/De Novo pathway guidance | — |
+| `fda-qsr-audit-prep` | FDA 21 CFR 820 QSR audit preparation | — |
+| `mdr-745-specialist` | EU MDR 2017/745 medical device compliance | — |
+| `aims-audit` | ISO/IEC 42001 AIMS internal audit | — |
+| `capa-officer` | CAPA system for medical device QMS | — |
+| `qms-audit-expert` | ISO 13485 internal audit expertise | — |
+| `quality-documentation-manager` | Document control for medical device QMS | — |
+| `quality-manager-qmr` | Quality Manager Responsible Person (QMR) | — |
+| `quality-manager-qms-iso13485` | ISO 13485 QMS implementation | — |
+| `risk-management-specialist` | ISO 14971 medical device risk management | — |
+| `regulatory-affairs-head` | FDA submissions, CE marking, multi-market strategy | — |
+| `ra-qm-skills` | 12 regulatory & QM agent skills bundle | — |
+| `information-security-manager-iso27001` | ISO 27001 for HealthTech/MedTech | — |
 
-### 🤖 AI & Prompt Engineering
+### AI & Prompt Engineering
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `prompt-engineer-toolkit` | Analyze and rewrite prompts for better AI output, create reusable templates | — |
-| `agent-designer` | Design multi-agent systems, create agent architectures | — |
-| `agent-protocol` | Inter-agent communication protocol for C-suite agent teams | — |
-| `agent-workflow-designer` | Design production-grade multi-agent workflows | — |
-| `context-engine` | Load and manage company context for all C-suite advisor skills | — |
-| `self-eval` | Honestly evaluate AI work quality using a two-axis scoring system | — |
-| `output-skill` | Override default LLM truncation, enforce complete code generation | — |
-| `full-output-enforcement` | Override default LLM truncation behavior | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `prompt-engineer-toolkit` | Analyze and rewrite prompts, create templates | — |
+| `agent-designer` | Multi-agent systems, agent architectures | — |
+| `agent-protocol` | Inter-agent communication protocol | — |
+| `agent-workflow-designer` | Production-grade multi-agent workflows | — |
+| `context-engine` | Company context management for C-suite skills | — |
+| `self-eval` | Two-axis AI work quality scoring | — |
+| `output-skill` | Override LLM truncation, enforce complete output | — |
+| `full-output-enforcement` | Override default LLM truncation | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 
-### 🛠️ Developer Tools & Workflow
+### Developer Tools & Workflow
 
-| Skill | Description | Link |
-|-------|-------------|------|
-| `skill-creator` | Create new skills, modify and improve existing skills | [anthropics/skills](https://github.com/anthropics/skills) |
-| `skill-tester` | Validate, test, and score the quality of skills | — |
-| `skill-security-auditor` | Security audit skills within the claude-skills ecosystem | [github.com/user/repo](https://github.com/user/repo) |
-| `command-guide` | Guide for Claude Code commands | — |
-| `epic-design` | Design and manage epics for project management | — |
-| `ship-gate` | Gate checks before shipping features | — |
-| `tc-tracker` | Track technical changes and manage TC lifecycles | — |
-| `cs-onboard` | Founder onboarding interview capturing company context | — |
-| `scrum-master` | Data-driven agile team analysis and coaching | — |
-| `jira-expert` | Atlassian Jira expert for projects, planning, workflows, automation | — |
-| `confluence-expert` | Atlassian Confluence expert for spaces, knowledge bases, documentation | — |
-| `atlassian-admin` | Atlassian admin for Jira, Confluence, Bitbucket, Trello | — |
-| `atlassian-templates` | Jira and Confluence template creator/modifier | — |
-| `pm-skills` | 6 project management skills: senior PM, scrum master, Jira, Confluence | — |
-
----
-
-## Skills Sources
-
-Skills in this collection were sourced from the following repositories:
-
-### 1. Anthropic Official (11 skills)
-https://github.com/anthropics/skills
-
-`algorithmic-art` · `brand-guidelines` · `canvas-design` · `claude-api` · `frontend-design` · `mcp-builder` · `skill-creator` · `theme-factory` · `web-artifacts-builder` · `webapp-testing` · `frontend-developer`
-
-### 2. alirezarezvani/claude-skills (204 skills)
-https://github.com/alirezarezvani/claude-skills
-
-Engineering, product, marketing, finance, C-level, compliance, security, DevOps, senior roles, and more.
-
-### 3. Leonxlnx/taste-skill (12 skills)
-https://github.com/Leonxlnx/taste-skill
-
-`taste-skill` · `design-taste-frontend` · `gpt-taste` · `high-end-visual-design` · `minimalist-ui` · `industrial-brutalist-ui` · `redesign-existing-projects` · `image-to-code` · `soft-skill` · `brutalist-skill` · `stitch-design-taste` · `full-output-enforcement`
-
-### 4. pbakaus/impeccable (1 skill, 18 commands)
-https://github.com/pbakaus/impeccable
-
-`impeccable` (/audit /polish /animate /colorize /bolder /typeset...)
-
-### 5. dgreenheck/webgpu-claude-skill (1 skill)
-https://github.com/dgreenheck/webgpu-claude-skill
-
-`webgpu-threejs-tsl`
-
-### 6. mathewgeejo/agent-skills (1 skill)
-https://github.com/mathewgeejo/agent-skills
-
-`frontend-developer`
-
-### 7. nextlevelbuilder/ui-ux-pro-max-skill (1 skill)
-https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
-
-`ui-ux-pro-max`
+| Skill | Description | Source |
+|-------|-------------|--------|
+| `skill-creator` | Create, modify, and improve skills | [anthropics/skills](https://github.com/anthropics/skills) |
+| `skill-tester` | Validate, test, and score skill quality | — |
+| `skill-security-auditor` | Security audit for skills | — |
+| `command-guide` | Claude Code commands reference | — |
+| `epic-design` | Epic design and management | — |
+| `ship-gate` | Pre-ship gate checks | — |
+| `tc-tracker` | Technical change tracking | — |
+| `cs-onboard` | Founder onboarding interview | — |
+| `scrum-master` | Agile team analysis, velocity, retrospectives | — |
+| `jira-expert` | Jira projects, workflows, JQL, automation | — |
+| `confluence-expert` | Confluence spaces, knowledge bases, templates | — |
+| `atlassian-admin` | Jira, Confluence, Bitbucket, Trello admin | — |
+| `atlassian-templates` | Jira and Confluence template creator | — |
+| `pm-skills` | 6 project management skills bundle | — |
 
 ---
 
-> All skills are part of the [yassine808/claude-settings](https://github.com/yassine808/claude-settings) repository.
+<p align="center">
+  <sub>All skills are part of the <a href="https://github.com/yassine808/claude-settings">yassine808/claude-settings</a> repository.</sub>
+</p>
