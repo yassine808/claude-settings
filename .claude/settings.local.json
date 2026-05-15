@@ -3,7 +3,13 @@
     "allow": [
       "Bash(git init *)",
       "Bash(Remove-Item -Recurse -Force skills/ui-ux-pro-max/.git, skills/webgpu/.git -ErrorAction SilentlyContinue)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(Measure-Object -Line)",
+      "Bash(Select-Object -ExpandProperty Count)",
+      "Bash(git rm *)",
+      "Bash(echo \"EXIT: $?\")"
     ]
   }
 }
