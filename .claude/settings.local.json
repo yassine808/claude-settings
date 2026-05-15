@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init *)",
+      "Bash(Remove-Item -Recurse -Force skills/ui-ux-pro-max/.git, skills/webgpu/.git -ErrorAction SilentlyContinue)",
+      "Bash(git commit *)"
+    ]
+  }
+}
