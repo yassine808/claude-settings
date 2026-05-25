@@ -1,16 +1,25 @@
 # MyCld — Claude Code Skills & Configuration
 
-A personal Claude Code setup with **350+ skills** spanning frontend, backend, design, AI/ML, DevOps, video, audio, marketing, and more.
+A personal Claude Code setup with **350+ skills** organized by category and source.
+
+**Sources:**
+- **Anthropic** — Official Anthropic skills (claude.ai marketplace)
+- **FAL** — FAL.ai image/video/audio generation models
+- **Venice** — Venice AI image/video/audio generation
+- **MiniMax** — MiniMax document generation
+- **Community** — Community-contributed skills from various authors
 
 ---
 
 ## Frontend & Web
 
+### Anthropic
+
 | Command | Description |
 |---------|-------------|
 | `/frontend-design` | Distinctive, production-grade frontend interfaces with high design quality |
-| `/frontend-dev` | Frontend development workflows |
 | `/frontend-developer` | React components, responsive layouts, client-side state (React 19, Next.js 15) |
+| `/frontend-dev` | Frontend development workflows |
 | `/frontend-skill` | Frontend skill toolkit |
 | `/frontend-slides` | Frontend slide decks |
 | `/impeccable` | UI/UX design, audit, polish — websites, dashboards, components, accessibility |
@@ -26,8 +35,32 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/redesign-skill` | Upgrade existing sites/apps to premium quality |
 | `/login-flow` | Mobile login and authentication flow screens |
 | `/theme-factory` | 10 preset themes (colors/fonts) for slides, docs, reports, landing pages |
+| `/image-to-code` | Elite image-to-code — analyze design, implement website |
+| `/image-to-code-skill` | Elite image-to-code — analyze design, implement website |
+| `/imagegen-frontend-mobile` | Premium mobile app screen concepts (iOS/Android) |
+| `/imagegen-frontend-web` | Premium website design references, section-by-section |
+| `/webgpu-threejs-tsl` | WebGPU-enabled Three.js with TSL shaders |
+
+### Community
+
+| Command | Description |
+|---------|-------------|
+| `/design-taste-frontend` | Senior UI/UX Engineer — metric-based rules, strict component architecture |
+| `/gpt-taste` | Elite UX/UI & Advanced GSAP Motion Engineer |
+| `/gpt-tasteskill` | Elite UX/UI & Advanced GSAP Motion Engineer |
+| `/taste-skill` | Senior UI/UX Engineer — metric-based rules, strict component architecture |
+| `/soft-skill` | High-end agency design standards |
+| `/stitch-design-taste` | Semantic Design System for Google Stitch — premium anti-generic UI |
+| `/stitch-skill` | Semantic Design System for Google Stitch |
+| `/stitch-loop` | Stitch loop workflow |
+| `/ui-skills` | UI skills toolkit |
+| `/wpds` | WPDS design system |
+
+---
 
 ## Animation & Motion
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -37,9 +70,13 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/gsap-timeline` | GSAP timeline sequencing |
 | `/flutter-animating-apps` | Flutter animation techniques |
 | `/vfx-text-cursor` | VFX text cursor effects |
-| `/lottie` | Lottie animation workflows |
+| `/remotion` | Remotion video framework |
+
+---
 
 ## Visual Design & Brand
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -53,29 +90,37 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/design-md` | Design in Markdown |
 | `/design-review` | Design review |
 | `/plan-design-review` | Plan a design review |
-| `/stitch-design-taste` | Semantic Design System for Google Stitch — premium anti-generic UI |
-| `/stitch-loop` | Stitch loop workflow |
 | `/minimalist-skill` | Clean editorial-style interfaces, warm monochrome, bento grids |
 | `/minimalist-ui` | Clean editorial-style interfaces |
 | `/brutalist-skill` | Raw mechanical interfaces, Swiss typographic + military terminal aesthetics |
 | `/industrial-brutalist-ui` | Raw mechanical interface design |
+| `/hand-drawn-diagrams` | Hand-drawn style diagrams |
+| `/algorithmic-art` | Algorithmic art with p5.js |
+| `/hatch-pet` | Create animated pet spritesheets |
+
+---
 
 ## UI Frames & Overlays
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/frame-data-chart-nyt` | NYT-newsroom-style data charts |
 | `/frame-flowchart-sticky` | SVG flowchart with sticky notes |
-| `/frame-glitch-title` | Glitch/cypunk hero titles |
+| `/frame-glitch-title` | Glitch/cyberpunk hero titles |
 | `/frame-light-leak-cinema` | Light leak cinematic 16:9 letterbox frames |
 | `/frame-liquid-bg-hero` | WebGL liquid background hero sections |
 | `/frame-logo-outro` | Logo outro with glow bloom + tagline |
 | `/frame-macos-notification` | macOS-style notification banners |
 | `/poster-hero` | Poster-style hero sections |
 | `/mockup-device-3d` | iPhone + MacBook GLTF 3D mockups |
-| `/hand-drawn-diagrams` | Hand-drawn style diagrams |
+
+---
 
 ## Figma
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -87,37 +132,64 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/figma-implement-design` | Implement Figma designs in code |
 | `/figma-use` | Figma usage patterns |
 
+---
+
 ## Three.js & WebGL
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/threejs` | Three.js 3D web graphics |
-| `/webgpu` | WebGPU development |
 | `/webgpu-threejs-tsl` | WebGPU-enabled Three.js with TSL shaders |
 | `/shader-dev` | Shader development |
 
+---
+
 ## Image Generation & Editing
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/imagegen` | Image generation |
-| `/imagegen-frontend-mobile` | Premium mobile app screen concepts (iOS/Android) |
-| `/imagegen-frontend-web` | Premium website design references, section-by-section |
 | `/imagen` | Google Imagen image generation |
 | `/image-enhancer` | Image enhancement |
+| `/replicate` | Replicate API for image models |
+
+### FAL
+
+| Command | Description |
+|---------|-------------|
 | `/fal-generate` | FAL image generation |
 | `/fal-image-edit` | FAL image editing |
 | `/fal-3d` | FAL 3D generation |
 | `/fal-upscale` | FAL image upscaling |
 | `/fal-restore` | FAL image restoration |
 | `/fal-vision` | FAL vision/analysis |
+
+### Venice
+
+| Command | Description |
+|---------|-------------|
 | `/venice-image-generate` | Venice image generation |
 | `/venice-image-edit` | Venice image editing |
-| `/replicate` | Replicate API for image models |
-| `/sora` | OpenAI Sora video generation |
-| `/hatch-pet` | Create animated pet spritesheets |
+
+---
 
 ## Video
+
+### Anthropic
+
+| Command | Description |
+|---------|-------------|
+| `/video-downloader` | Download videos from the web |
+| `/video-hyperframes` | Hyperframes / Remotion video |
+| `/youtube-clipper` | Clip YouTube videos |
+| `/remotion` | Remotion video framework |
+| `/sora` | OpenAI Sora video generation |
+
+### FAL
 
 | Command | Description |
 |---------|-------------|
@@ -127,11 +199,17 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/fal-realtime` | FAL realtime generation |
 | `/fal-train` | FAL model training |
 | `/fal-tryon` | FAL virtual try-on |
+
+### Venice
+
+| Command | Description |
+|---------|-------------|
 | `/venice-video` | Venice video generation |
-| `/video-downloader` | Download videos from the web |
-| `/video-hyperframes` | Hyperframes / Remotion video |
-| `/youtube-clipper` | Clip YouTube videos |
-| `/remotion` | Remotion video framework |
+
+### Community Templates
+
+| Command | Description |
+|---------|-------------|
 | `/8-bit-orbit-video-template` | 8-bit orbit video template |
 | `/after-hours-editorial-template` | After-hours editorial video template |
 | `/field-notes-editorial-template` | Field notes editorial video template |
@@ -139,18 +217,31 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/weread-year-in-review-video-template` | WeRead year-in-review video template |
 | `/digits-fintech-swiss-template` | Digits fintech Swiss video template |
 
+---
+
 ## Audio & Speech
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/ai-music-album` | AI music album creation |
-| `/venice-audio-music` | Venice music generation |
-| `/venice-audio-speech` | Venice speech/audio generation |
 | `/speech` | Text-to-speech |
 | `/gif-sticker-maker` | GIF sticker creation |
 | `/slack-gif-creator` | Slack GIF creation |
 
+### Venice
+
+| Command | Description |
+|---------|-------------|
+| `/venice-audio-music` | Venice music generation |
+| `/venice-audio-speech` | Venice speech/audio generation |
+
+---
+
 ## Slides & Presentations
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -158,30 +249,59 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/pptx` | PowerPoint file generation |
 | `/pptx-generator` | PowerPoint generation |
 | `/ppt-keynote` | Keynote presentation creation |
+| `/pptx-html-fidelity-audit` | Audit pptx export against source HTML |
+
+### Community
+
+| Command | Description |
+|---------|-------------|
 | `/html-ppt-retro-quarterly-review` | HTML retro quarterly review slides |
 | `/nanobanana-ppt` | Nanobanana PowerPoint |
-| `/pptx-html-fidelity-audit` | Audit pptx export against source HTML |
+
+### Community Templates
+
+| Command | Description |
+|---------|-------------|
 | `/deck-guizang-editorial` | Guizang editorial deck template |
 | `/deck-open-slide-canvas` | Open slide canvas (1920×1080, React) |
 | `/deck-swiss-international` | Swiss international deck template |
 | `/swiss-creative-mode-template` | Swiss creative mode template |
 
+---
+
 ## Documents & PDF
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/doc` | Document creation |
-| `/doc-kami-parchment` | Kami parchment document style |
 | `/docx` | Word document generation |
 | `/pdf` | PDF generation |
-| `/minimax-docx` | MiniMax Word documents |
-| `/minimax-pdf` | MiniMax PDF generation |
 | `/resume-modern` | Modern resume (A4, PDF) |
 | `/data-report` | Data reports from CSV/Excel/JSON |
 | `/article-magazine` | Huashu magazine article HTML layout |
+| `/release-notes-one-pager` | One-page release notes |
+
+### MiniMax
+
+| Command | Description |
+|---------|-------------|
+| `/minimax-docx` | MiniMax Word documents |
+| `/minimax-pdf` | MiniMax PDF generation |
+
+### Community Templates
+
+| Command | Description |
+|---------|-------------|
+| `/doc-kami-parchment` | Kami parchment document style |
 | `/editorial-burgundy-principles-template` | Burgundy editorial principles template |
 
+---
+
 ## Social & Cards
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -193,7 +313,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/screenshots-marketing` | Marketing screenshots |
 | `/screenshot` | Screenshot capture |
 
+---
+
 ## Development & Engineering
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -219,14 +343,24 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/tech-debt-tracker` | Scan, score, and prioritize technical debt |
 | `/dependency-auditor` | Audit dependencies for vulnerabilities, license conflicts |
 | `/migration-architect` | Zero-downtime migration planning and rollback |
-| `/monorepo-navigate` | Turborepo, Nx, pnpm workspaces, cross-package analysis |
+| `/monorepo-navigator` | Turborepo, Nx, pnpm workspaces, cross-package analysis |
 | `/spec-driven-workflow` | Write specs before code, acceptance criteria |
 | `/spec-to-repo` | Turn natural-language specs into runnable repositories |
 | `/sql-database-assistant` | SQL queries, migrations, ORM (Prisma, Drizzle, TypeORM) |
 | `/database-designer` | Database schema design, SQL vs NoSQL, query optimization |
 | `/database-schema-designer` | ERD diagrams, normalization, table relationships |
+| `/full-output-enforcement` | Override LLM truncation, enforce complete code generation |
+| `/output-skill` | Override LLM truncation |
+| `/self-eval` | Two-axis quality scoring for AI work |
+| `/adversarial-reviewer` | Adversarial code review, hostile reviewer personas |
+| `/performance-profiler` | Node.js, Python, Go profiling, flamegraphs |
+| `/tc-tracker` | Technical change tracking between AI sessions |
+
+---
 
 ## Cloud & Infrastructure
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -242,7 +376,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/runbook-generator` | Operational runbooks (deploy, incident, rollback) |
 | `/feature-flags-architect` | Feature flag rollout, kill switches, flag debt |
 
+---
+
 ## APIs & MCP
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -252,14 +390,22 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/mcp-server-builder` | Production MCP servers from OpenAPI contracts |
 | `/rag-architect` | RAG pipelines, retrieval strategies, embedding models |
 
+---
+
 ## Stripe & Payments
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/stripe-integration-expert` | Subscriptions, webhooks, checkout, billing portal |
 | `/saas-scaffolder` | SaaS boilerplate (Next.js, Stripe, Drizzle, shadcn/ui) |
 
+---
+
 ## C-Suite & Executive
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -281,7 +427,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/general-counsel-advisor` | Contract review, IP strategy, regulatory landscape |
 | `/culture-architect` | Company culture as operational behavior |
 
+---
+
 ## C-Suite Workflows
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -297,7 +447,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/meeting-analyzer` | Meeting transcript analysis, communication patterns |
 | `/interview-system-designer` | Hiring pipeline design, scoring rubrics |
 
+---
+
 ## Marketing & Growth
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -331,7 +485,6 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/competitive-teardown` | Competitor product analysis, SWOT, feature matrices |
 | `/competitor-alternatives` | Alternative/vs pages for SEO |
 | `/competitive-ads-extractor` | Extract competitor ad intelligence |
-| `/brand-guidelines` | Brand documentation and enforcement |
 | `/internal-narrative` | Company story across all audiences |
 | `/launch-strategy` | Product/feature launch planning |
 | `/free-tool-strategy` | Engineering as marketing — free tools for lead gen |
@@ -340,8 +493,13 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/ab-test-setup` | A/B test planning and design |
 | `/experiment-designer` | Product experiments, hypotheses, sample sizing |
 | `/churn-prevention` | Cancel flow design, save offers, dunning |
+| `/marketing-context` | Marketing context document (brand voice, ICP, positioning) |
+
+---
 
 ## Conversion Rate Optimization (CRO)
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -352,7 +510,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/popup-cro` | Popups, modals, overlays, exit intent |
 | `/paywall-upgrade-cro` | In-app paywalls, upgrade screens, feature gates |
 
+---
+
 ## Product Management
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -363,10 +525,15 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/pricing-strategy` | SaaS pricing tiers, value metrics, price increases |
 | `/saas-metrics-coach` | SaaS financial health — ARR, MRR, churn, LTV, CAC |
 | `/roadmap-communicator` | Roadmap narratives, release notes, stakeholder updates |
-| `/project-manager-toolkit` | PM toolkit, risk analysis, resource optimization |
+| `/senior-pm` | Senior PM — portfolio management, risk analysis, resource optimization |
 | `/pm-skills` | 6 PM skills — senior PM, scrum master, Jira, Confluence |
+| `/product-skills` | 10 product skills — PM toolkit, agile PO, UX researcher, UI design |
+
+---
 
 ## Sales & Revenue
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -375,14 +542,17 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/customer-success-manager` | Customer health scoring, churn prediction, expansion |
 | `/business-growth-skills` | Customer success, sales engineer, revenue ops, contracts |
 
+---
+
 ## Security & Compliance
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/ai-security` | AI/ML security — prompt injection, jailbreak, data poisoning |
 | `/cloud-security` | AWS/Azure/GCP posture assessment, IAM, S3 exposure |
 | `/security-pen-testing` | Security audits, OWASP Top 10, vulnerability scanning |
-| `/security-review` | Comprehensive security review |
 | `/red-team` | Authorized red team engagements, attack path analysis |
 | `/threat-detection` | Threat hunting, IOC analysis, anomaly detection |
 | `/gdpr-audit-prep` | `/cs:gdpr-audit-prep` — GDPR audit readiness |
@@ -392,13 +562,17 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/iso27001-audit-prep` | `/cs:iso27001-audit-prep` — ISO 27001 readiness |
 | `/information-security-manager-iso27001` | ISO 27001 ISMS implementation |
 | `/isms-audit-expert` | ISMS audit for ISO 27001 |
-| `/hipaa` | HIPAA compliance |
 | `/ai-act-readiness` | `/cs:ai-act-readiness` — EU AI Act compliance |
 | `/iso42001-specialist` | ISO/IEC 42001 AI Management System |
 | `/compliance-os` | Multi-framework compliance orchestrator |
 | `/compliance-readiness` | `/cs:compliance-readiness` — Multi-framework compliance check |
+| `/eu-ai-act-specialist` | EU AI Act operational compliance |
+
+---
 
 ## Medical Device & Regulatory
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -415,7 +589,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/risk-management-specialist` | Medical device risk management per ISO 14971 |
 | `/ra-qm-skills` | 12 regulatory & QM skills — ISO 13485, MDR, FDA, ISO 27001 |
 
+---
+
 ## Atlassian
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -424,7 +602,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/atlassian-admin` | Atlassian org-wide user/permission/SSO management |
 | `/atlassian-templates` | Jira and Confluence template creation |
 
+---
+
 ## DevOps & CI/CD
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -434,25 +616,29 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/changelog-generator` | Release notes from Conventional Commits |
 | `/env-secrets-manager` | Environment variable and secrets auditing |
 | `/secrets-vault-manager` | HashiCorp Vault, cloud secret stores, rotation |
-| `/performance-profiler` | Node.js, Python, Go profiling, flamegraphs |
 | `/ms365-tenant-manager` | Microsoft 365 tenant admin, Azure AD, Exchange, Teams |
-| `/ship-gate` | Ship gate review checklist |
+
+---
 
 ## Testing & QA
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/webapp-testing` | Playwright web app testing, screenshots, browser logs |
 | `/browser-automation` | Browser automation, scraping, form filling |
-| `/playwright` | Playwright MCP for browser interaction |
-| `/webgpu` | WebGPU testing |
 | `/tdd-guide` | Test-driven development |
 | `/full-output-enforcement` | Override LLM truncation, enforce complete code generation |
 | `/output-skill` | Override LLM truncation |
 | `/self-eval` | Two-axis quality scoring for AI work |
 | `/adversarial-reviewer` | Adversarial code review, hostile reviewer personas |
 
+---
+
 ## Agents & Multi-Agent
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -462,7 +648,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/agent-browser` | Browser agent |
 | `/artifacts-builder` | Build artifacts |
 
-## Skills & Plugins
+---
+
+## Skills & Plugins (Meta)
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -474,8 +664,13 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/brainstorming` | Brainstorming |
 | `/domain-name-brainstormer` | Domain name brainstorming |
 | `/prompt-engineer-toolkit` | Prompt analysis, templates, AI content workflows |
+| `/context-engine` | Load/manage company context for C-suite |
+
+---
 
 ## Mobile
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -484,19 +679,11 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/imagegen-frontend-mobile` | Premium mobile app screen concepts (iOS, Android, cross-platform) |
 | `/login-flow` | Mobile login and auth flows |
 
-## 3D & Creative
-
-| Command | Description |
-|---------|-------------|
-| `/fal-3d` | FAL 3D generation |
-| `/threejs` | Three.js 3D web graphics |
-| `/shader-dev` | Shader development |
-| `/vfx-text-cursor` | VFX text cursor effects |
-| `/algorithmic-art` | Algorithmic art with p5.js |
-| `/canvas-design` | Visual art in .png/.pdf |
-| `/hatch-pet` | Animated pet spritesheets |
+---
 
 ## Communication & Writing
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
@@ -506,37 +693,32 @@ A personal Claude Code setup with **350+ skills** spanning frontend, backend, de
 | `/team-communications` | 3P updates, newsletters, incident reports |
 | `/internal-narrative` | Company story across all audiences |
 
+---
+
 ## Platform Design & UX Research
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/platform-design` | Platform design |
 | `/ux-researcher-designer` | UX research, persona generation, journey mapping |
 | `/design-consultation` | Design consultation |
-| `/stakeholder-alignment` | Stakeholder alignment workflows |
 | `/site-architecture` | Information architecture, URL hierarchy, site navigation |
-| `/page-cro` | Page-level conversion optimization |
 | `/intl-expansion` | International market entry, localization |
 
-## Image-to-Code
-
-| Command | Description |
-|---------|-------------|
-| `/image-to-code` | Elite image-to-code for Codex — analyze design, implement website |
-| `/image-to-code-skill` | Elite image-to-code for Codex |
+---
 
 ## Miscellaneous
+
+### Anthropic
 
 | Command | Description |
 |---------|-------------|
 | `/wpds` | WPDS design system |
 | `/pixelbin-media` | Pixelbin media management |
 | `/d3-visualization` | D3.js data visualization |
-| `/napkin` | Napkin AI integration |
-| `/context-engine` | Load/manage company context for C-suite |
-| `/context-engine` | Company context management |
-| `/tc-tracker` | Technical change tracking between AI sessions |
 
 ---
 
-*Auto-generated skill index — 350+ skills across 30+ categories.*
+*Auto-generated skill index — 350+ skills across 30+ categories, grouped by source.*
