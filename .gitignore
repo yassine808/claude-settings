@@ -1,0 +1,11 @@
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude internal
+.claude/worktrees/
