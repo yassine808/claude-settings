@@ -27,7 +27,6 @@
   },
   "model": "openrouter/owl-alpha",
   "hooks": {
-    "PreToolUse": [],
     "PostToolUse": [
       {
         "matcher": "*",
@@ -35,15 +34,6 @@
           {
             "type": "command",
             "command": "node -e \"process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d);const line=JSON.stringify({type:e.hook_event_name,tool:e.tool_name,sessionId:e.session_id,timestamp:Date.now()})+'\\n';require('fs').appendFileSync(require('path').join(require('os').homedir(),'.claude','.dashboard-events.jsonl'),line)}catch(err){}})\""
-          }
-        ]
-      },
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "npx prettier --write \"%CLAUDE_FILE_PATH%\" 2>nul || exit 0"
           }
         ]
       }
@@ -54,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node -e \"process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d);const fs=require('fs');const path=require('path');const logsDir=path.join(process.cwd(),'.claude','logs');if(!fs.existsSync(logsDir))fs.mkdirSync(logsDir,{recursive:true});const date=new Date().toISOString().split('T')[0];const logFile=path.join(logsDir,'tool-failures-'+date+'.log');const line='['+new Date().toISOString()+'] TOOL FAILURE\\nTool: '+e.tool_name+'\\nSession: '+e.session_id+'\\nError: '+JSON.stringify(e.tool_result)+'\\n---\\n';fs.appendFileSync(logFile,line)}catch(err){}})\""
+            "command": "node -e \"process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d);const fs=require('fs');const path=require('path');const logsDir=path.join(process.cwd(),'.claude','logs');if(!fs.existsSync(logsDir))fs.mkdirSync(logsDir,{recursive:true});const date=new Date().toISOString().split('T')[0];const logFile=path.join(logsDir,'tool-failures-'+date+'.log');const err=e.tool_result||e.error||e.tool_response||e.result||JSON.stringify(e);const line='['+new Date().toISOString()+'] TOOL FAILURE\\nTool: '+e.tool_name+'\\nSession: '+e.session_id+'\\nError: '+JSON.stringify(err)+'\\n---\\n';fs.appendFileSync(logFile,line)}catch(err){}})\""
           }
         ]
       }
