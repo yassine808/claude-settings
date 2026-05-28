@@ -9,3 +9,7 @@ Thumbs.db
 
 # Claude internal
 .claude/worktrees/
+.claude/settings.local.json
+
+# User config
+claude.json
