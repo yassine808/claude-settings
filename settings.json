@@ -2,11 +2,16 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "respectGitignore": true,
   "cleanupPeriodDays": 30,
+  "skillListingBudgetFraction": 1,
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "",
+    "ANTHROPIC_AUTH_TOKEN": "API key here",
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "BASH_DEFAULT_TIMEOUT_MS": "30000",
-    "BASH_MAX_TIMEOUT_MS": "120000"
+    "BASH_MAX_TIMEOUT_MS": "120000",
+    "BASH_MAX_OUTPUT_LENGTH": "50000",
+    "CLAUDE_CODE_SYNTAX_HIGHLIGHT": "true",
+    "CLAUDE_CODE_DEBUG_LOG_LEVEL": "verbose",
+    "CLAUDE_CODE_DEBUG_LOGS_DIR": "%USERPROFILE%\\.claude\\logs"
   },
   "includeCoAuthoredBy": false,
   "includeGitInstructions": true,
@@ -22,6 +27,7 @@
   },
   "model": "openrouter/owl-alpha",
   "hooks": {
+    "PreToolUse": [],
     "PostToolUse": [
       {
         "matcher": "*",
@@ -29,6 +35,26 @@
           {
             "type": "command",
             "command": "node -e \"process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d);const line=JSON.stringify({type:e.hook_event_name,tool:e.tool_name,sessionId:e.session_id,timestamp:Date.now()})+'\\n';require('fs').appendFileSync(require('path').join(require('os').homedir(),'.claude','.dashboard-events.jsonl'),line)}catch(err){}})\""
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"%CLAUDE_FILE_PATH%\" 2>nul || exit 0"
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d);const fs=require('fs');const path=require('path');const logsDir=path.join(process.cwd(),'.claude','logs');if(!fs.existsSync(logsDir))fs.mkdirSync(logsDir,{recursive:true});const date=new Date().toISOString().split('T')[0];const logFile=path.join(logsDir,'tool-failures-'+date+'.log');const line='['+new Date().toISOString()+'] TOOL FAILURE\\nTool: '+e.tool_name+'\\nSession: '+e.session_id+'\\nError: '+JSON.stringify(e.tool_result)+'\\n---\\n';fs.appendFileSync(logFile,line)}catch(err){}})\""
           }
         ]
       }
@@ -42,10 +68,25 @@
           }
         ]
       }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"[System.Media.SystemSounds]::Hand.Play(); Start-Sleep -Milliseconds 500\""
+          }
+        ]
+      }
     ]
   },
   "enabledPlugins": {
-    "frontend-design@claude-plugins-official": true
+    "frontend-design@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "supabase@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "last30days-skill": {
@@ -61,13 +102,104 @@
       }
     }
   },
+  "outputStyle": "Explanatory",
+  "spinnerTipsEnabled": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Speedrunning your tech debt",
+      "Blaming the context window",
+      "Confidently guessing",
+      "Vibing with your codebase",
+      "Consulting my imagination",
+      "Hallucinating responsibly",
+      "Pretending to think",
+      "Apologizing in advance",
+      "Overthinking this",
+      "Submitting my best guess",
+      "Turning coffee into code (slow day)",
+      "Contemplating the spaghetti",
+      "Blaming npm (again)",
+      "Consulting the stack overflow oracle",
+      "Negotiating with TypeScript",
+      "Poking the CI pipeline with a stick",
+      "Rebooting common sense",
+      "Waiting for the CPU to feel like it",
+      "Pretending I know what I'm doing",
+      "Blaming the last guy (it's you)",
+      "Negotiating with the borrow checker",
+      "Googling the error you just saw",
+      "Convincing eslint to look away",
+      "Waiting for npm to finish crying",
+      "Fighting with git about your story",
+      "Rebooting the AI with percussive maintenance",
+      "Hoping the type gods forgive me",
+      "Swapping in prod because YOLO",
+      "Blinking slowly at your code",
+      "Pretending this is fine",
+      "Rebuilding node_modules for no reason",
+      "Closing my eyes and hitting enter",
+      "Asking chatgpt what I should do",
+      "Running it again to see what happens",
+      "Praying the race condition doesn't show up",
+      "Blaming the weather (it's sunny)",
+      "Trying to remember what this variable does",
+      "Just gonna... vibe check this function",
+      "Making the same mistake with more confidence",
+      "Garbage collecting my will to live",
+      "Lying to the linter so it leaves me alone",
+      "Waiting for Claude to wake back up",
+      "Refreshing the docs I should've read",
+      "Patching a bug with duct tape and hope",
+      "Seeing if this breaks staging",
+      "Rewriting what I just wrote",
+      "Pretending I didn't see that test fail",
+      "Shipping it (pray for me)",
+      "Blaming a race condition I can't prove",
+      "Turning off the tests temporarily",
+      "Deciding this is tomorrow's problem",
+      "Checking if anyone's watching this deploy",
+      "Typing with my eyes partially closed",
+      "nigga",
+      "Letting the linter win this round"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "tips": [
+      "Type cc instead of claude to skip all permission prompts",
+      "Prefix ! to run bash inline: !git status, !npm test",
+      "Esc stops Claude. Esc+Esc rewinds to any checkpoint.",
+      "Tell Claude to run tests after changes for 2-3x quality boost",
+      "Add ultrathink to any prompt for harder reasoning problems",
+      "Use @filename to skip Claude searching — point it directly",
+      "Use /btw for side questions without polluting main context",
+      "Run /clear between unrelated tasks — fresh context wins",
+      "Paste raw error logs directly, not your description of them",
+      "Use --worktree to run 3-5 parallel Claude sessions at once",
+      "Ctrl+S stashes your draft prompt while you ask something quick",
+      "Ctrl+B backgrounds long bash tasks so Claude keeps working",
+      "Use subagents for deep investigations to keep main context clean",
+      "Plan Mode (Shift+Tab) before any multi-file or unfamiliar work",
+      "After 2 failed fixes on same thing, /clear and reprompt",
+      "Ctrl+G edits Claude's plan before it writes a single line",
+      "Run /init to generate CLAUDE.md then cut the result in half",
+      "After a mistake say: update CLAUDE.md so this won't happen again",
+      "Use .claude/rules/ for rules that only apply to certain file types",
+      "Use @imports in CLAUDE.md to reference docs without bloating it",
+      "Allowlist safe commands with /permissions to stop repeat prompts",
+      "Use /sandbox for risky or experimental autonomous work",
+      "Use /loop to poll deploys or CI while you focus elsewhere",
+      "Run /voice and hold Space to dictate richer prompts hands-free",
+      "Switch models mid-session: /model opus for hard, haiku for fast"
+    ]
+  },
   "effortLevel": "xhigh",
-  "skillListingBudgetFraction": 1,
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "light-ansi",
+  "theme": "custom:Purple claude code",
   "editorMode": "normal",
+  "verbose": true,
   "preferredNotifChannel": "terminal_bell",
   "autoConnectIde": true
 }
