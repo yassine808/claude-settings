@@ -161,7 +161,8 @@
       "Checking if anyone's watching this deploy",
       "Typing with my eyes partially closed",
       "nigga",
-      "Letting the linter win this round"
+      "Letting the linter win this round",
+      "Meow meow meow meow"
     ]
   },
   "spinnerTipsOverride": {
@@ -197,7 +198,7 @@
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:Purple claude code",
+  "theme": "light-ansi",
   "editorMode": "normal",
   "verbose": true,
   "preferredNotifChannel": "terminal_bell",
