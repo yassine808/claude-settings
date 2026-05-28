@@ -1,5 +1,3 @@
-# remove-claude.ps1
-
 function Ask($msg) {
     $r = Read-Host "$msg [y/N]"
     return $r -match '^[Yy]$'
@@ -70,12 +68,4 @@ if (Ask "[6/6] Remove SYSTEM environment variables? (requires admin)") {
         [System.Environment]::GetEnvironmentVariables("Machine").Keys |
             Where-Object { $_ -match "^(ANTHROPIC|CLAUDE)_" } |
             ForEach-Object {
-                [System.Environment]::SetEnvironmentVariable($_, $null, "Machine")
-                Write-Host "  Cleared [Machine]: $_"
-            }
-    } catch {
-        Write-Host "  Failed - re-run as Administrator"
-    }
-}
-
-Write-Host "=== Done. Restart terminal to apply env changes. ==="
+                [System.Environment]::SetEn
