@@ -8,8 +8,7 @@
 Thumbs.db
 
 # Claude internal
-.claude/worktrees/
-.claude/settings.local.json
+.claude/
 
 # User config
 claude.json
