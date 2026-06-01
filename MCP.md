@@ -32,7 +32,7 @@ npx claudepluginhub anthropics/claude-plugins-official --plugin code-review
 npx claudepluginhub anthropics/claude-plugins-official --plugin github
 npx claudepluginhub anthropics/claude-plugins-official --plugin playwright
 npx claudepluginhub jarrodwatts/claude-hud --plugin claude-hud
-npx claudepluginhub sickn33/antigravity-awesome-skills
+npx claudepluginhub sickn33/antigravity-awesome-skills (heavy)
 
 # ============================================= AGENTS =======================================================
 
