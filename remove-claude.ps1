@@ -1,3 +1,5 @@
+# search for claude left-overs : Get-ChildItem -Path C:\ -Recurse -Filter "*claude*" -ErrorAction SilentlyContinue
+
 function Ask($msg) {
     $r = Read-Host "$msg [y/N]"
     return $r -match '^[Yy]$'
