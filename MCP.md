@@ -17,12 +17,6 @@ ui-ux-pro-max-skill:
   - /plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
   - /plugin install ui-ux-pro-max@ui-ux-pro-max-skill
 
-
-
-npx claudepluginhub thedotmack/claude-mem --plugin claude-mem (removed)
-  -  powershell -c "irm bun.sh/install.ps1 | iex"
-  -  [System.Environment]::SetEnvironmentVariable("CLAUDE_CODE_GIT_BASH_PATH", "C:\Program Files\Git\bin\bash.exe", "User")
-
 npx claudepluginhub dashed/claude-marketplace --plugin skill-creator
 npx claudepluginhub upstash/context7 --plugin context7-plugin
 npx claudepluginhub addyosmani/agent-skills --plugin agent-skills
@@ -31,9 +25,20 @@ npx claudepluginhub anthropics/claude-plugins-official --plugin claude-md-manage
 npx claudepluginhub anthropics/claude-plugins-official --plugin code-review
 npx claudepluginhub anthropics/claude-plugins-official --plugin github
 npx claudepluginhub anthropics/claude-plugins-official --plugin playwright
-npx claudepluginhub jarrodwatts/claude-hud --plugin claude-hud
-npx claudepluginhub sickn33/antigravity-awesome-skills (heavy)
+
+npx claudepluginhub affaan-m/ecc --plugin ecc
 
 # ============================================= AGENTS =======================================================
 
-npx claudepluginhub affaan-m/ecc --plugin ecc
+
+
+
+# ============================================ HEAVY ONES ====================================================
+
+**heavy** npx claudepluginhub sickn33/antigravity-awesome-skills
+
+npx claudepluginhub thedotmack/claude-mem --plugin claude-mem (removed)
+  -  powershell -c "irm bun.sh/install.ps1 | iex"
+  -  [System.Environment]::SetEnvironmentVariable("CLAUDE_CODE_GIT_BASH_PATH", "C:\Program Files\Git\bin\bash.exe", "User")
+
+npx claudepluginhub jarrodwatts/claude-hud --plugin claude-hud

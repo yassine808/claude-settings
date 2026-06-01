@@ -300,6 +300,7 @@
     ]
   },
   "effortLevel": "xhigh",
+  "skillListingBudgetFraction": 1,
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
