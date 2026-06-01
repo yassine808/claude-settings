@@ -4,7 +4,7 @@
   "cleanupPeriodDays": 30,
   "skillListingBudgetFraction": 1,
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "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",
+    "ANTHROPIC_AUTH_TOKEN": "API KEY HERE",
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "BASH_DEFAULT_TIMEOUT_MS": "30000",
     "BASH_MAX_TIMEOUT_MS": "120000",
@@ -13,7 +13,7 @@
     "CLAUDE_CODE_DEBUG_LOG_LEVEL": "verbose",
     "CLAUDE_CODE_DEBUG_LOGS_DIR": "%USERPROFILE%\\.claude\\logs"
   },
-  "includeCoAuthoredBy": false,
+  "includeCoAuthoredBy": true,
   "includeGitInstructions": true,
   "permissions": {
     "deny": [
@@ -76,7 +76,56 @@
     "pyright-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
-    "supabase@claude-plugins-official": true
+    "supabase@claude-plugins-official": true,
+    "superpowers@superpowers-dev": true,
+    "ecc@ecc": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "impeccable@impeccable": true,
+    "claude-mem@thedotmack": true,
+    "skill-creator@alberto-marketplace": true,
+    "context7-plugin@context7-marketplace": true,
+    "agent-skills@addy-agent-skills": true,
+    "code-review@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "antigravity-awesome-skills@antigravity-awesome-skills": true,
+    "antigravity-bundle-essentials@antigravity-awesome-skills": true,
+    "antigravity-bundle-security-engineer@antigravity-awesome-skills": true,
+    "antigravity-bundle-security-developer@antigravity-awesome-skills": true,
+    "antigravity-bundle-web-wizard@antigravity-awesome-skills": true,
+    "antigravity-bundle-web-designer@antigravity-awesome-skills": true,
+    "antigravity-bundle-full-stack-developer@antigravity-awesome-skills": true,
+    "antigravity-bundle-agent-architect@antigravity-awesome-skills": true,
+    "antigravity-bundle-llm-application-developer@antigravity-awesome-skills": true,
+    "antigravity-bundle-indie-game-dev@antigravity-awesome-skills": true,
+    "antigravity-bundle-python-pro@antigravity-awesome-skills": true,
+    "antigravity-bundle-typescript-javascript@antigravity-awesome-skills": true,
+    "antigravity-bundle-systems-programming@antigravity-awesome-skills": true,
+    "antigravity-bundle-startup-founder@antigravity-awesome-skills": true,
+    "antigravity-bundle-business-analyst@antigravity-awesome-skills": true,
+    "antigravity-bundle-marketing-growth@antigravity-awesome-skills": true,
+    "antigravity-bundle-devops-cloud@antigravity-awesome-skills": true,
+    "antigravity-bundle-observability-monitoring@antigravity-awesome-skills": true,
+    "antigravity-bundle-data-analytics@antigravity-awesome-skills": true,
+    "antigravity-bundle-data-engineering@antigravity-awesome-skills": true,
+    "antigravity-bundle-creative-director@antigravity-awesome-skills": true,
+    "antigravity-bundle-qa-testing@antigravity-awesome-skills": true,
+    "antigravity-bundle-mobile-developer@antigravity-awesome-skills": true,
+    "antigravity-bundle-integration-apis@antigravity-awesome-skills": true,
+    "antigravity-bundle-architecture-design@antigravity-awesome-skills": true,
+    "antigravity-bundle-ddd-evented-architecture@antigravity-awesome-skills": true,
+    "antigravity-bundle-automation-builder@antigravity-awesome-skills": true,
+    "antigravity-bundle-revops-crm-automation@antigravity-awesome-skills": true,
+    "antigravity-bundle-commerce-payments@antigravity-awesome-skills": true,
+    "antigravity-bundle-odoo-erp@antigravity-awesome-skills": true,
+    "antigravity-bundle-azure-ai-cloud@antigravity-awesome-skills": true,
+    "antigravity-bundle-expo-react-native@antigravity-awesome-skills": true,
+    "antigravity-bundle-apple-platform-design@antigravity-awesome-skills": true,
+    "antigravity-bundle-makepad-builder@antigravity-awesome-skills": true,
+    "antigravity-bundle-seo-specialist@antigravity-awesome-skills": true,
+    "antigravity-bundle-documents-presentations@antigravity-awesome-skills": true,
+    "antigravity-bundle-oss-maintainer@antigravity-awesome-skills": true
   },
   "extraKnownMarketplaces": {
     "last30days-skill": {
@@ -89,6 +138,72 @@
       "source": {
         "source": "github",
         "repo": "anthropics/skills"
+      }
+    },
+    "superpowers-dev": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers"
+      }
+    },
+    "ecc": {
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/ecc"
+      }
+    },
+    "vibe-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "cuteribs/vibe-marketplace"
+      }
+    },
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    },
+    "alberto-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "dashed/claude-marketplace"
+      }
+    },
+    "context7-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "upstash/context7"
+      }
+    },
+    "addy-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "addyosmani/agent-skills"
+      }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    "antigravity-awesome-skills": {
+      "source": {
+        "source": "github",
+        "repo": "sickn33/antigravity-awesome-skills"
       }
     }
   },
@@ -190,7 +305,7 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "light-ansi",
   "editorMode": "normal",
-  "verbose": true,
+  "verbose": false,
   "preferredNotifChannel": "terminal_bell",
   "autoConnectIde": true
 }
