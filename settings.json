@@ -11,7 +11,8 @@
     "BASH_MAX_OUTPUT_LENGTH": "50000",
     "CLAUDE_CODE_SYNTAX_HIGHLIGHT": "true",
     "CLAUDE_CODE_DEBUG_LOG_LEVEL": "verbose",
-    "CLAUDE_CODE_DEBUG_LOGS_DIR": "%USERPROFILE%\\.claude\\logs"
+    "CLAUDE_CODE_DEBUG_LOGS_DIR": "%USERPROFILE%\\.claude\\logs",
+    "CLAUDE_CODE_USE_POWERSHELL_TOOL": "1"
   },
   "includeCoAuthoredBy": true,
   "includeGitInstructions": true,
@@ -76,56 +77,17 @@
     "pyright-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
-    "supabase@claude-plugins-official": true,
     "superpowers@superpowers-dev": true,
     "ecc@ecc": true,
     "ui-ux-pro-max@ui-ux-pro-max-skill": true,
     "impeccable@impeccable": true,
-    "claude-mem@thedotmack": true,
     "skill-creator@alberto-marketplace": true,
     "context7-plugin@context7-marketplace": true,
     "agent-skills@addy-agent-skills": true,
     "code-review@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
-    "github@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
-    "antigravity-awesome-skills@antigravity-awesome-skills": true,
-    "antigravity-bundle-essentials@antigravity-awesome-skills": true,
-    "antigravity-bundle-security-engineer@antigravity-awesome-skills": true,
-    "antigravity-bundle-security-developer@antigravity-awesome-skills": true,
-    "antigravity-bundle-web-wizard@antigravity-awesome-skills": true,
-    "antigravity-bundle-web-designer@antigravity-awesome-skills": true,
-    "antigravity-bundle-full-stack-developer@antigravity-awesome-skills": true,
-    "antigravity-bundle-agent-architect@antigravity-awesome-skills": true,
-    "antigravity-bundle-llm-application-developer@antigravity-awesome-skills": true,
-    "antigravity-bundle-indie-game-dev@antigravity-awesome-skills": true,
-    "antigravity-bundle-python-pro@antigravity-awesome-skills": true,
-    "antigravity-bundle-typescript-javascript@antigravity-awesome-skills": true,
-    "antigravity-bundle-systems-programming@antigravity-awesome-skills": true,
-    "antigravity-bundle-startup-founder@antigravity-awesome-skills": true,
-    "antigravity-bundle-business-analyst@antigravity-awesome-skills": true,
-    "antigravity-bundle-marketing-growth@antigravity-awesome-skills": true,
-    "antigravity-bundle-devops-cloud@antigravity-awesome-skills": true,
-    "antigravity-bundle-observability-monitoring@antigravity-awesome-skills": true,
-    "antigravity-bundle-data-analytics@antigravity-awesome-skills": true,
-    "antigravity-bundle-data-engineering@antigravity-awesome-skills": true,
-    "antigravity-bundle-creative-director@antigravity-awesome-skills": true,
-    "antigravity-bundle-qa-testing@antigravity-awesome-skills": true,
-    "antigravity-bundle-mobile-developer@antigravity-awesome-skills": true,
-    "antigravity-bundle-integration-apis@antigravity-awesome-skills": true,
-    "antigravity-bundle-architecture-design@antigravity-awesome-skills": true,
-    "antigravity-bundle-ddd-evented-architecture@antigravity-awesome-skills": true,
-    "antigravity-bundle-automation-builder@antigravity-awesome-skills": true,
-    "antigravity-bundle-revops-crm-automation@antigravity-awesome-skills": true,
-    "antigravity-bundle-commerce-payments@antigravity-awesome-skills": true,
-    "antigravity-bundle-odoo-erp@antigravity-awesome-skills": true,
-    "antigravity-bundle-azure-ai-cloud@antigravity-awesome-skills": true,
-    "antigravity-bundle-expo-react-native@antigravity-awesome-skills": true,
-    "antigravity-bundle-apple-platform-design@antigravity-awesome-skills": true,
-    "antigravity-bundle-makepad-builder@antigravity-awesome-skills": true,
-    "antigravity-bundle-seo-specialist@antigravity-awesome-skills": true,
-    "antigravity-bundle-documents-presentations@antigravity-awesome-skills": true,
-    "antigravity-bundle-oss-maintainer@antigravity-awesome-skills": true
+    "superpowers-plus@superpowers-plus-dev": true
   },
   "extraKnownMarketplaces": {
     "last30days-skill": {
@@ -170,12 +132,6 @@
         "repo": "pbakaus/impeccable"
       }
     },
-    "thedotmack": {
-      "source": {
-        "source": "github",
-        "repo": "thedotmack/claude-mem"
-      }
-    },
     "alberto-marketplace": {
       "source": {
         "source": "github",
@@ -200,10 +156,10 @@
         "repo": "anthropics/claude-plugins-official"
       }
     },
-    "antigravity-awesome-skills": {
+    "superpowers-plus-dev": {
       "source": {
         "source": "github",
-        "repo": "sickn33/antigravity-awesome-skills"
+        "repo": "xhyqaq/superpowers-plus"
       }
     }
   },
@@ -265,7 +221,7 @@
       "Deciding this is tomorrow's problem",
       "Checking if anyone's watching this deploy",
       "Typing with my eyes partially closed",
-      "nigga",
+      "Nigga",
       "Letting the linter win this round",
       "Meow meow meow meow"
     ]
@@ -300,7 +256,6 @@
     ]
   },
   "effortLevel": "xhigh",
-  "skillListingBudgetFraction": 1,
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
