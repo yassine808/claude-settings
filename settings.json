@@ -4,7 +4,7 @@
   "cleanupPeriodDays": 30,
   "skillListingBudgetFraction": 1,
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "",
+    "ANTHROPIC_AUTH_TOKEN": "API KEY HERE",
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "BASH_DEFAULT_TIMEOUT_MS": "30000",
     "BASH_MAX_TIMEOUT_MS": "120000",
@@ -12,7 +12,8 @@
     "CLAUDE_CODE_SYNTAX_HIGHLIGHT": "true",
     "CLAUDE_CODE_DEBUG_LOG_LEVEL": "verbose",
     "CLAUDE_CODE_DEBUG_LOGS_DIR": "%USERPROFILE%\\.claude\\logs",
-    "CLAUDE_CODE_USE_POWERSHELL_TOOL": "1"
+    "CLAUDE_CODE_USE_POWERSHELL_TOOL": "1",
+    "ECC_GATEGUARD": "off"
   },
   "includeCoAuthoredBy": true,
   "includeGitInstructions": true,
@@ -70,6 +71,10 @@
         ]
       }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node C:/Users/ysmag/.claude/statusline.js"
   },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
