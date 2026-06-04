@@ -4,7 +4,7 @@
   "cleanupPeriodDays": 30,
   "skillListingBudgetFraction": 1,
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "API KEY HERE",
+    "ANTHROPIC_AUTH_TOKEN": "",
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "BASH_DEFAULT_TIMEOUT_MS": "30000",
     "BASH_MAX_TIMEOUT_MS": "120000",

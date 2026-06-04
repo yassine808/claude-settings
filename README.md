@@ -1,6 +1,6 @@
 # MyCld — Claude Code Config & Skill Library
 
-A personal Claude Code configuration packed with **358 skills**, multiple plugins, MCP servers, and scratch-built agents. Copy any command below to start using a skill, plugin, or agent.
+A personal Claude Code configuration packed with **359 skills**, multiple plugins, MCP servers, and scratch-built agents. Copy any command below to start using a skill, plugin, or agent.
 
 ---
 

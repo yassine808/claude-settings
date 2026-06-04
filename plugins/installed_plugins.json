@@ -1,0 +1,157 @@
+{
+  "version": 2,
+  "plugins": {
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\frontend-design\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-06-01T13:24:20.538Z",
+        "lastUpdated": "2026-06-01T13:24:20.538Z"
+      }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\typescript-lsp\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-06-01T13:24:20.538Z",
+        "lastUpdated": "2026-06-01T13:24:20.538Z"
+      }
+    ],
+    "pyright-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\pyright-lsp\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-06-01T13:24:20.538Z",
+        "lastUpdated": "2026-06-01T13:24:20.538Z"
+      }
+    ],
+    "rust-analyzer-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\rust-analyzer-lsp\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-06-01T13:24:20.538Z",
+        "lastUpdated": "2026-06-01T13:24:20.538Z"
+      }
+    ],
+    "gopls-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\gopls-lsp\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-06-01T13:24:20.538Z",
+        "lastUpdated": "2026-06-01T13:24:20.538Z"
+      }
+    ],
+    "superpowers@superpowers-dev": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\superpowers-dev\\superpowers\\5.1.0",
+        "version": "5.1.0",
+        "installedAt": "2026-06-01T13:31:50.407Z",
+        "lastUpdated": "2026-06-01T13:31:50.407Z",
+        "gitCommitSha": "6fd4507659784c351abbd2bc264c7162cfd386dc"
+      }
+    ],
+    "ecc@ecc": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\ecc\\ecc\\2.0.0-rc.1",
+        "version": "2.0.0-rc.1",
+        "installedAt": "2026-06-01T13:36:15.782Z",
+        "lastUpdated": "2026-06-01T13:36:15.782Z",
+        "gitCommitSha": "64cd1ba248e77e377e76f70fc4e6434bfdddd511"
+      }
+    ],
+    "ui-ux-pro-max@ui-ux-pro-max-skill": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\ui-ux-pro-max-skill\\ui-ux-pro-max\\2.5.0",
+        "version": "2.5.0",
+        "installedAt": "2026-06-01T13:39:14.086Z",
+        "lastUpdated": "2026-06-01T13:39:14.086Z",
+        "gitCommitSha": "b7e3af80f6e331f6fb456667b82b12cade7c9d35"
+      }
+    ],
+    "impeccable@impeccable": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\impeccable\\impeccable\\3.5.0",
+        "version": "3.5.0",
+        "installedAt": "2026-06-01T13:43:20.067Z",
+        "lastUpdated": "2026-06-01T13:43:20.067Z",
+        "gitCommitSha": "ea3e66b9844fbbdbfdbb55b81d4ec6ec3181234b"
+      }
+    ],
+    "skill-creator@alberto-marketplace": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\alberto-marketplace\\skill-creator\\2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-06-01T13:50:11.818Z",
+        "lastUpdated": "2026-06-01T13:50:11.818Z",
+        "gitCommitSha": "ee9e229628aed52db5d79e97a7c0d1a48616f168"
+      }
+    ],
+    "context7-plugin@context7-marketplace": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\context7-marketplace\\context7-plugin\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-06-01T13:52:57.743Z",
+        "lastUpdated": "2026-06-01T13:52:57.743Z",
+        "gitCommitSha": "29edf154d82d503532575a73836135eca225b6f4"
+      }
+    ],
+    "agent-skills@addy-agent-skills": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\addy-agent-skills\\agent-skills\\6ce029897d2b",
+        "version": "6ce029897d2b",
+        "installedAt": "2026-06-01T13:53:25.451Z",
+        "lastUpdated": "2026-06-01T13:53:25.451Z",
+        "gitCommitSha": "6ce029897d2b794940325fc7148774a6ec51111c"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-06-01T13:54:49.132Z",
+        "lastUpdated": "2026-06-01T13:54:49.132Z"
+      }
+    ],
+    "claude-md-management@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\claude-md-management\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-06-01T13:55:54.591Z",
+        "lastUpdated": "2026-06-01T13:55:54.591Z"
+      }
+    ],
+    "playwright@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\claude-plugins-official\\playwright\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-06-01T13:56:49.563Z",
+        "lastUpdated": "2026-06-01T13:56:49.563Z"
+      }
+    ],
+    "superpowers-plus@superpowers-plus-dev": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\ysmag\\.claude\\plugins\\cache\\superpowers-plus-dev\\superpowers-plus\\5.0.6",
+        "version": "5.0.6",
+        "installedAt": "2026-06-01T16:28:11.936Z",
+        "lastUpdated": "2026-06-01T16:28:11.936Z",
+        "gitCommitSha": "8653b9d4f63653624b3b7c357b98e93fecf694bc"
+      }
+    ]
+  }
+}
