@@ -4,6 +4,12 @@ A personal Claude Code configuration packed with **359 skills**, multiple plugin
 
 ---
 
+## Statusline
+
+![Statusline Screenshot](Statusline.png)
+
+---
+
 ## Quick Start — Copy Commands
 
 ### Run a skill
@@ -339,8 +345,12 @@ Use this section as a searchable index. Each entry is the **folder name** — us
 MyCld/
 ├── CLAUDE.md              # global Claude Code protocol (rules)
 ├── README.md              # <-- this file
+├── Statusline.png         # statusline screenshot
 ├── claude.json            # Claude Code native config (MCP servers, projects, tips)
 ├── settings.json          # harness config (plugins, hooks, env, model, spinner verbs)
+├── statusline.js          # custom statusline script
+├── rules/                 # Claude Code rules
+│   └── ask-user-question.md
 └── skills/                # 358 skill folders
     └── <skill-name>/
         └── SKILL.md       # frontmatter (name, description, triggers) + body
