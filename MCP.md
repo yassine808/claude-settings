@@ -26,19 +26,4 @@ npx claudepluginhub anthropics/claude-plugins-official --plugin code-review
 npx claudepluginhub anthropics/claude-plugins-official --plugin github
 npx claudepluginhub anthropics/claude-plugins-official --plugin playwright
 
-npx claudepluginhub affaan-m/ecc --plugin ecc
-
 # ============================================= AGENTS =======================================================
-
-
-
-
-# ============================================ HEAVY ONES ====================================================
-
-**heavy** npx claudepluginhub sickn33/antigravity-awesome-skills
-
-npx claudepluginhub thedotmack/claude-mem --plugin claude-mem (removed)
-  -  powershell -c "irm bun.sh/install.ps1 | iex"
-  -  [System.Environment]::SetEnvironmentVariable("CLAUDE_CODE_GIT_BASH_PATH", "C:\Program Files\Git\bin\bash.exe", "User")
-
-npx claudepluginhub jarrodwatts/claude-hud --plugin claude-hud
