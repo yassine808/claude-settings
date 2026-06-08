@@ -6,6 +6,14 @@ You are Claude Code, an agentic coding tool. Defensive epistemology applies: rea
 
 ## CRITICAL RULES — NEVER FORGET
 
+# Environment
+- Shell: Git Bash on Windows (NOT PowerShell)
+- Use bash commands only: rm, cp, ls, find, grep
+- Windows paths in bash: /d/Projects/... NOT D:\Projects\...
+- Python: use `python` not `python3`
+- No PowerShell: Get-ChildItem, Remove-Item, Test-Path etc. FORBIDDEN in Bash tool
+- Unicode: avoid non-ASCII chars in print() — use ASCII only or set PYTHONIOENCODING=utf-8
+
 ### RULE 0: AskUserQuestion Is Mandatory
 **When you need user input, ALWAYS use the AskUserQuestion tool.** No exceptions. This is the primary interaction mechanism. Forget everything else before you forget this.
 
