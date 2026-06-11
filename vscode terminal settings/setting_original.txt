@@ -1,0 +1,45 @@
+{
+    "claudeCode.preferredLocation":  "panel",
+    "workbench.statusBar.visible":  false,
+    "editor.stickyScroll.enabled":  false,
+    "files.autoSave":  "afterDelay",
+    "explorer.confirmDelete":  false,
+    "gitlens.ai.model":  "gitkraken",
+    "gitlens.ai.gitkraken.model":  "gemini:gemini-2.5-flash",
+    "terminal.integrated.stickyScroll.enabled":  false,
+    "security.workspace.trust.untrustedFiles":  "open",
+    "terminal.integrated.enableMultiLinePasteWarning":  "never",
+    "explorer.confirmDragAndDrop":  false,
+    "tabnine.experimentalAutoImports":  true,
+    "terminal.integrated.mouseWheelScrollSensitivity":  3,
+    "terminal.integrated.gpuAcceleration":  "off",
+    "terminal.integrated.profiles.windows":  {
+                                                 "PowerShell":  {
+                                                                    "source":  "PowerShell",
+                                                                    "icon":  "terminal-powershell",
+                                                                    "path":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+                                                                },
+                                                 "Command Prompt":  {
+                                                                        "path":  [
+                                                                                     "${env:windir}\\Sysnative\\cmd.exe",
+                                                                                     "${env:windir}\\System32\\cmd.exe"
+                                                                                 ],
+                                                                        "args":  [
+
+                                                                                 ],
+                                                                        "icon":  "terminal-cmd"
+                                                                    },
+                                                 "Git Bash":  {
+                                                                  "source":  "Git Bash",
+                                                                  "icon":  "terminal-git-bash"
+                                                              },
+                                                 "Windows PowerShell":  {
+                                                                            "path":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+                                                                        }
+                                             },
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.pptx": "pptx-preview.preview"
+    }
+}
