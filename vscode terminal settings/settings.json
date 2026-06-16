@@ -6,7 +6,7 @@
     "explorer.confirmDelete": false,
     "gitlens.ai.model": "gitkraken",
     "gitlens.ai.gitkraken.model": "gemini:gemini-2.5-flash",
-    "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.stickyScroll.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "explorer.confirmDragAndDrop": false,
