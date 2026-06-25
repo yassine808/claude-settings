@@ -62,12 +62,29 @@ function Set-CcActiveKey {
         throw "No settings.json found at $SettingsFile"
     }
 
-    $settings = Get-Content $SettingsFile -Raw | ConvertFrom-Json
-    if (-not $settings.env) {
-        $settings | Add-Member -NotePropertyName env -NotePropertyValue (@{}) -Force
+    $raw = Get-Content $SettingsFile -Raw
+
+    # Validate the file actually has an ANTHROPIC_AUTH_TOKEN key before
+    # touching it -- parse read-only, never serialize back from this object,
+    # so we never reformat the rest of the file.
+    $parsed = $raw | ConvertFrom-Json
+    if (-not $parsed.env -or -not ($parsed.env.PSObject.Properties.Name -contains "ANTHROPIC_AUTH_TOKEN")) {
+        throw "settings.json has no env.ANTHROPIC_AUTH_TOKEN key to update. Add it manually first."
     }
-    $settings.env.ANTHROPIC_AUTH_TOKEN = $Entry.API
-    $settings | ConvertTo-Json -Depth 20 | Set-Content $SettingsFile
+
+    # Targeted text replace: only the value after "ANTHROPIC_AUTH_TOKEN":
+    # changes. Every other byte in the file (spacing, key order, quoting
+    # style) is left exactly as it was. Escape $ in the replacement text
+    # since .NET regex treats $ specially there (e.g. $1 backreferences).
+    $pattern = '(?<="ANTHROPIC_AUTH_TOKEN"\s*:\s*")[^"]*(?=")'
+    $safeReplacement = $Entry.API -replace '\$', '$$$$'
+    $newRaw = [Regex]::Replace($raw, $pattern, $safeReplacement)
+
+    if ($newRaw -eq $raw -and $parsed.env.ANTHROPIC_AUTH_TOKEN -ne $Entry.API) {
+        throw "Failed to update ANTHROPIC_AUTH_TOKEN -- pattern did not match. File left unchanged."
+    }
+
+    Set-Content -Path $SettingsFile -Value $newRaw -NoNewline
 
     Set-CcLastId -Id $Entry.ID
 
