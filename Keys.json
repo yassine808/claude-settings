@@ -1,0 +1,29 @@
+{
+  "keys": [
+    {
+      "ID": 1,
+      "API": "sk-or-v1-86f2142bde2ce7cc3f52cd9eb26e4d20755801d696bf114f",
+      "DESC": "primary account"
+    },
+    {
+      "ID": 2,
+      "API": "sk-or-v1-75dfaa7817465925f04b7d533ccf4978b975b37ce9478e92",
+      "DESC": "backup account"
+    },
+    {
+      "ID": 3,
+      "API": "sk-or-v1-46a74807bf1de4e9b1849e94693d6a26f6a2d7e01b493520",
+      "DESC": "burner / testing"
+    },
+    {
+      "ID": 4,
+      "API": "sk-or-v1-42fc2f3febe68b37dd929c89be9a4132928f6b5f8602cd0f",
+      "DESC": "team shared"
+    },
+    {
+      "ID": 5,
+      "API": "sk-or-v1-209d3f8e94bbc3f9322a910e3b8c8b82c4144b7ac52fb2b6",
+      "DESC": "personal side project"
+    }
+  ]
+}
