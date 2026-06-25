@@ -90,44 +90,107 @@ function Select-CcKeyInteractive {
     }
 
     function Write-CcRow {
-        param($Entry, [bool]$IsCurrent, [bool]$IsSelected)
+        param($Entry, [bool]$IsCurrent, [bool]$IsSelected, [int]$Row)
 
-        $marker = if ($IsCurrent) { "*" } else { " " }
-        $cursor = if ($IsSelected) { ">" } else { " " }
-        $idText  = "{0,4}" -f $Entry.ID
+        # Always position explicitly before writing -- never rely on
+        # natural cursor advance from a previous write, since writing a
+        # string exactly WindowWidth characters long causes the console
+        # to auto-wrap and silently shift CursorTop, desyncing every
+        # later SetCursorPosition call that assumes fixed row heights.
+        [System.Console]::SetCursorPosition(0, $Row)
+
+        $cursor = if ($IsSelected) { "> " } else { "  " }
+        $dotChar = "*"
+        $dotColor = if ($IsCurrent) { "Green" } else { "DarkGray" }
+        $idText  = "ID {0}" -f $Entry.ID
         $apiText = Mask-CcKey $Entry.API
-        $descText = $Entry.DESC
+        $descColor = if ($IsSelected) { "White" } else { "DarkGray" }
 
-        $idColor    = if ($IsSelected) { "Yellow" } else { "Cyan" }
-        $apiColor   = if ($IsSelected) { "Yellow" } else { "Green" }
-        $descColor  = if ($IsSelected) { "Yellow" } else { "Magenta" }
-        $punctColor = if ($IsSelected) { "Yellow" } else { "DarkGray" }
+        Write-Host $cursor -NoNewline -ForegroundColor Green
+        Write-Host $dotChar -NoNewline -ForegroundColor $dotColor
+        Write-Host " " -NoNewline
+        Write-Host $idText -NoNewline -ForegroundColor Blue
+        Write-Host "  " -NoNewline
+        Write-Host $apiText -NoNewline -ForegroundColor DarkYellow
+        Write-Host "  " -NoNewline
+        Write-Host $Entry.DESC -NoNewline -ForegroundColor $descColor
 
-        Write-Host "$cursor$marker " -NoNewline -ForegroundColor $punctColor
-        Write-Host $idText -NoNewline -ForegroundColor $idColor
-        Write-Host " ; " -NoNewline -ForegroundColor $punctColor
-        Write-Host $apiText -NoNewline -ForegroundColor $apiColor
-        Write-Host " ; " -NoNewline -ForegroundColor $punctColor
-        Write-Host $descText -ForegroundColor $descColor
+        # Clear any leftover characters to the right (e.g. if the previous
+        # render at this row was longer), then force cursor to next line
+        # ourselves rather than letting the terminal wrap.
+        $safeWidth = [Math]::Max(0, [System.Console]::WindowWidth - [System.Console]::CursorLeft - 1)
+        if ($safeWidth -gt 0) {
+            Write-Host (" " * $safeWidth) -NoNewline
+        }
     }
 
-    while ($true) {
-        Clear-Host
-        Write-Host "Select a key (Up/Down + Enter, Esc to cancel)" -ForegroundColor Cyan
-        Write-Host ("     {0,4} ; {1,-18} ; {2}" -f "ID", "API", "DESC") -ForegroundColor DarkGray
+    # initial draw
+    Write-Host ""
+    $headerTop = [System.Console]::CursorTop
+    [System.Console]::SetCursorPosition(0, $headerTop)
+    Write-Host "? " -NoNewline -ForegroundColor Green
+    Write-Host "Select a key to switch to: " -NoNewline -ForegroundColor White
+    Write-Host "(Use arrow keys)" -NoNewline -ForegroundColor DarkGray
+    $safeWidth = [Math]::Max(0, [System.Console]::WindowWidth - [System.Console]::CursorLeft - 1)
+    if ($safeWidth -gt 0) { Write-Host (" " * $safeWidth) -NoNewline }
+
+    $listTop = $headerTop + 1
+
+    function Collapse-CcMenu {
+        param([string]$AnswerText, [string]$AnswerColor = "Cyan")
+
+        # blank out every row the menu used (header + all list rows)
+        $blank = " " * ([System.Console]::WindowWidth - 1)
+        for ($row = 0; $row -le $keys.Count; $row++) {
+            [System.Console]::SetCursorPosition(0, $headerTop + $row)
+            Write-Host $blank -NoNewline
+        }
+        [System.Console]::SetCursorPosition(0, $headerTop)
+        Write-Host "? " -NoNewline -ForegroundColor Green
+        Write-Host "Select a key to switch to: " -NoNewline -ForegroundColor White
+        Write-Host $AnswerText -NoNewline -ForegroundColor $AnswerColor
+        [System.Console]::SetCursorPosition(0, $headerTop + 1)
+    }
+
+    $originalCursorVisible = [System.Console]::CursorVisible
+    try {
+        [System.Console]::CursorVisible = $false
+
         for ($i = 0; $i -lt $keys.Count; $i++) {
             $isCurrent = ($keys[$i].ID -eq $lastId)
             $isSelected = ($i -eq $selectedIndex)
-            Write-CcRow -Entry $keys[$i] -IsCurrent $isCurrent -IsSelected $isSelected
+            Write-CcRow -Entry $keys[$i] -IsCurrent $isCurrent -IsSelected $isSelected -Row ($listTop + $i)
         }
+        # park cursor below the list so further output (e.g. errors) appears cleanly
+        [System.Console]::SetCursorPosition(0, $listTop + $keys.Count)
 
-        $key = [System.Console]::ReadKey($true)
-        switch ($key.Key) {
-            "UpArrow"   { $selectedIndex = ($selectedIndex - 1 + $keys.Count) % $keys.Count }
-            "DownArrow" { $selectedIndex = ($selectedIndex + 1) % $keys.Count }
-            "Enter"     { return $keys[$selectedIndex] }
-            "Escape"    { return $null }
+        while ($true) {
+            $key = [System.Console]::ReadKey($true)
+            $prevIndex = $selectedIndex
+            switch ($key.Key) {
+                "UpArrow"   { $selectedIndex = ($selectedIndex - 1 + $keys.Count) % $keys.Count }
+                "DownArrow" { $selectedIndex = ($selectedIndex + 1) % $keys.Count }
+                "Enter"     {
+                    $picked = $keys[$selectedIndex]
+                    Collapse-CcMenu -AnswerText ("ID {0} ({1})" -f $picked.ID, $picked.DESC) -AnswerColor "Cyan"
+                    return $picked
+                }
+                "Escape"    {
+                    Collapse-CcMenu -AnswerText "cancelled" -AnswerColor "DarkGray"
+                    return $null
+                }
+            }
+
+            if ($selectedIndex -ne $prevIndex) {
+                # redraw only the two affected rows, in place
+                Write-CcRow -Entry $keys[$prevIndex] -IsCurrent ($keys[$prevIndex].ID -eq $lastId) -IsSelected $false -Row ($listTop + $prevIndex)
+                Write-CcRow -Entry $keys[$selectedIndex] -IsCurrent ($keys[$selectedIndex].ID -eq $lastId) -IsSelected $true -Row ($listTop + $selectedIndex)
+            }
         }
+    } finally {
+        # guaranteed restore even on Ctrl+C, an exception, or any other
+        # unexpected exit -- never leave the user's terminal cursor hidden
+        [System.Console]::CursorVisible = $originalCursorVisible
     }
 }
 
@@ -146,9 +209,7 @@ function cc {
 
     if ($Arg -eq "-l") {
         $picked = Select-CcKeyInteractive
-        Clear-Host
         if ($null -eq $picked) {
-            Write-Host "Cancelled, no change made." -ForegroundColor DarkGray
             return
         }
         Set-CcActiveKey -Entry $picked
