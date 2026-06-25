@@ -118,17 +118,17 @@ function Select-CcKeyInteractive {
 
         $cursor = if ($IsSelected) { "> " } else { "  " }
         $dotChar = "*"
-        $dotColor = if ($IsCurrent) { "Green" } else { "DarkGray" }
+        $dotColor = if ($IsCurrent) { "Green" } else { "White" }
         $idText  = "ID {0}" -f $Entry.ID
         $apiText = Mask-CcKey $Entry.API
         $descColor = if ($IsSelected) { "White" } else { "DarkGray" }
 
-        Write-Host $cursor -NoNewline -ForegroundColor Green
+        Write-Host $cursor -NoNewline -ForegroundColor Blue
         Write-Host $dotChar -NoNewline -ForegroundColor $dotColor
         Write-Host " " -NoNewline
         Write-Host $idText -NoNewline -ForegroundColor Blue
         Write-Host "  " -NoNewline
-        Write-Host $apiText -NoNewline -ForegroundColor DarkYellow
+        Write-Host $apiText -NoNewline -ForegroundColor DarkMagenta
         Write-Host "  " -NoNewline
         Write-Host $Entry.DESC -NoNewline -ForegroundColor $descColor
 
