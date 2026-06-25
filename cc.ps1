@@ -141,9 +141,28 @@ function Select-CcKeyInteractive {
         }
     }
 
-    # initial draw
-    Write-Host ""
-    $headerTop = [System.Console]::CursorTop
+    # initial draw — guarantee enough buffer rows exist below the header.
+    #
+    # Problem: when BufferHeight == WindowHeight (no scrollback), printing
+    # newlines scrolls content up but pins the cursor at BufferHeight-1.
+    # So CursorTop after scrolling == BufferHeight-1, making listTop ==
+    # BufferHeight which is out of range for SetCursorPosition.
+    #
+    # Fix: scroll first (so content above is pushed up), then clamp
+    # $headerTop to (BufferHeight - neededRows) so there is always room.
+    $neededRows = $keys.Count + 2   # header row + list rows + 1 spare
+    $bufHeight  = [System.Console]::BufferHeight
+    $curTop     = [System.Console]::CursorTop
+    $available  = $bufHeight - $curTop
+    if ($available -lt $neededRows) {
+        $scrollBy = $neededRows - $available
+        Write-Host ("`n" * $scrollBy) -NoNewline
+    }
+    # Clamp: regardless of where the cursor ended up, force headerTop high
+    # enough that headerTop + neededRows - 1 <= BufferHeight - 1.
+    $headerTop = [Math]::Min([System.Console]::CursorTop, $bufHeight - $neededRows)
+    $listTop   = $headerTop + 1
+
     [System.Console]::SetCursorPosition(0, $headerTop)
     Write-Host "? " -NoNewline -ForegroundColor Green
     Write-Host "Select a key to switch to: " -NoNewline -ForegroundColor White
@@ -151,22 +170,24 @@ function Select-CcKeyInteractive {
     $safeWidth = [Math]::Max(0, [System.Console]::WindowWidth - [System.Console]::CursorLeft - 1)
     if ($safeWidth -gt 0) { Write-Host (" " * $safeWidth) -NoNewline }
 
-    $listTop = $headerTop + 1
-
     function Collapse-CcMenu {
         param([string]$AnswerText, [string]$AnswerColor = "Cyan")
 
-        # blank out every row the menu used (header + all list rows)
+        # blank out every row the menu used (header + all list rows).
+        # Use $listTop (not $headerTop) as the base for list rows so the
+        # coordinates match exactly what Write-CcRow used when drawing them.
         $blank = " " * ([System.Console]::WindowWidth - 1)
-        for ($row = 0; $row -le $keys.Count; $row++) {
-            [System.Console]::SetCursorPosition(0, $headerTop + $row)
+        [System.Console]::SetCursorPosition(0, $headerTop)
+        Write-Host $blank -NoNewline
+        for ($row = 0; $row -lt $keys.Count; $row++) {
+            [System.Console]::SetCursorPosition(0, $listTop + $row)
             Write-Host $blank -NoNewline
         }
         [System.Console]::SetCursorPosition(0, $headerTop)
         Write-Host "? " -NoNewline -ForegroundColor Green
         Write-Host "Select a key to switch to: " -NoNewline -ForegroundColor White
         Write-Host $AnswerText -NoNewline -ForegroundColor $AnswerColor
-        [System.Console]::SetCursorPosition(0, $headerTop + 1)
+        [System.Console]::SetCursorPosition(0, $listTop)
     }
 
     $originalCursorVisible = [System.Console]::CursorVisible
