@@ -79,7 +79,7 @@
         "terminal.background": "#0c0c0c8a",
 
         "editorPane.background": "#1a1b2600",
-        "editorGroupHeader.tabsBackground": "#0d0d0dcc",
+        "editorGroupHeader.tabsBackground": "#050505ff",
         "editorGroupHeader.noTabsBackground": "#0d0d0dcc",
         "breadcrumb.background": "#00000000",
 
@@ -93,11 +93,11 @@
 
         "tab.activeBackground": "#1e1e1eff",
         "tab.unfocusedActiveBackground": "#1e1e1ecc",
-        "tab.inactiveBackground": "#0d0d0d99",
-        "tab.unfocusedInactiveBackground": "#0d0d0d66",
+        "tab.inactiveBackground": "#1a1a1acc",
+        "tab.unfocusedInactiveBackground": "#1a1a1a99",
         "tab.activeBorderTop": "#0070f3",
         "tab.activeBorder": "#0070f3",
-        "tab.border": "#ffffff33",
+        "tab.border": "#ffffff66",
         "tab.activeForeground": "#ffffff",
         "tab.inactiveForeground": "#ffffff77",
         "tab.unfocusedActiveForeground": "#ffffffcc",
