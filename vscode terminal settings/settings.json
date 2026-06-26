@@ -76,7 +76,7 @@
         "terminal.ansiBrightYellow": "#0077ff",
         "terminalCursor.foreground": "#ffffff",
         "terminal.selectionBackground": "#003169",
-        "terminal.background": "#00000000",
+        "terminal.background": "#0c0c0c8a",
 
         "editorPane.background": "#1a1b2600",
         "editorGroupHeader.tabsBackground": "#0d0d0dcc",
