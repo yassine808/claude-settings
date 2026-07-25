@@ -22,6 +22,21 @@ process.stdin.on('end', () => {
       branch = cp.execSync(`git -C "${cwd}" branch --show-current 2>nul`, {timeout:2000}).toString().trim();
     } catch(_) {}
 
+    // Same hardening as the plugins' own statusline hooks: refuse symlinks
+    // (attacker could point flag at a sensitive file) and whitelist the mode
+    // string so nothing but a known token ever reaches the terminal.
+    const MODE_WHITELIST = new Set(['full','lite','ultra','wenyan-lite','wenyan','wenyan-full','wenyan-ultra']);
+    function readModeFlag(name) {
+      const p = `${process.env.CLAUDE_CONFIG_DIR || os.homedir() + '/.claude'}/.${name}-active`;
+      try {
+        if (fs.lstatSync(p).isSymbolicLink()) return '';
+        const raw = fs.readFileSync(p, 'utf8').slice(0, 64).replace(/[^a-z0-9-]/gi, '').toLowerCase();
+        return MODE_WHITELIST.has(raw) ? raw : '';
+      } catch(_) { return ''; }
+    }
+    const cavemanActive  = !!readModeFlag('caveman');
+    const ponytailActive = !!readModeFlag('ponytail');
+
     // 5h session rate-limit bar — always shown per request, regardless of
     // whether context-window info is present.
     const BAR_W  = 20;
@@ -90,6 +105,8 @@ process.stdin.on('end', () => {
       left += ` ${D}->${R} \ud83c\udf43 ${GR}${branch}${R}`;
     }
     left += linesStr;
+    if (cavemanActive)  left += ` \x1b[38;5;208m[caveman]${R}`;
+    if (ponytailActive) left += ` \x1b[38;5;208m[ponytail]${R}`;
 
     // --- right: model (effort) + context% (no bar) + 5h session bar + tokens + reset ---
     let right = `${D}${model}${R}  ${D}|${R}  ${D}ctx${R} ${pctClr}${pct}%${R}`;
