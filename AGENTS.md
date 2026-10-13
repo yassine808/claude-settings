@@ -56,6 +56,11 @@ Every shell/command execution MUST carry a timeout (TTL). Never run unbounded �
 - Long-running or watch processes: run `background: true` (background has no timeout by design) and poll for completion instead of blocking.
 - If a command hits the TTL: treat it as a FAILURE — stop, read the partial output, diagnose, do not blindly re-run with a bigger timeout.
 
+### RULE 8: Auto-init Project Instructions
+If the current project folder has no `AGENTS.md`, run `/init` to bootstrap one for that project.
+- **Exception — NEVER create or init `AGENTS.md` when OpenCode is opened in `C:\Users\ysmag\`** (the home directory). The global `~/.config/opencode/AGENTS.md` already covers it; the home folder must stay clean.
+- Check before acting: if the workspace root is `C:\Users\ysmag\`, skip this rule entirely.
+
 ---
 
 ## Failure Protocol
