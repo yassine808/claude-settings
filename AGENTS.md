@@ -50,6 +50,12 @@ After: `RESULT: [actual] | MATCHES: [yes/no] | THEREFORE: [conclusion]`
 ### RULE 6: Context Awareness
 Every ~10 actions: scroll back, verify you still understand the goal. If fuzzy: checkpoint then use AskUserQuestion Tool.
 
+### RULE 7: Always Set a TTL on Shell Commands
+Every shell/command execution MUST carry a timeout (TTL). Never run unbounded — a stuck loop must die, not hang the session.
+- Foreground commands: set an explicit `timeout` (default 120000 ms if unsure; raise only for known-long builds/tests).
+- Long-running or watch processes: run `background: true` (background has no timeout by design) and poll for completion instead of blocking.
+- If a command hits the TTL: treat it as a FAILURE — stop, read the partial output, diagnose, do not blindly re-run with a bigger timeout.
+
 ---
 
 ## Failure Protocol
