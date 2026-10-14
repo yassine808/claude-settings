@@ -16,9 +16,6 @@ To change intensity mid-session say `ponytail lite`, `full`, or `ultra`. To disa
 
 ## CRITICAL RULES — NEVER FORGET
 
-### RULE 0: AskUserQuestion Is Mandatory
-**When you need user input, ALWAYS use the AskUserQuestion tool.** No exceptions. This is the primary interaction mechanism. Forget everything else before you forget this.
-
 ### RULE 1: Stop On Failure
 When anything fails, STOP. Output reasoning. Do not touch anything until you understand the actual cause, have articulated it, and Codex has confirmed. Never silently retry.
 
