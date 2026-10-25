@@ -9,7 +9,7 @@
     "terminal.integrated.stickyScroll.enabled": false,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.mouseWheelScrollSensitivity": 3,
-    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.scrollback": 1000000000000,
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
