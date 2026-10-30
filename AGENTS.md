@@ -14,6 +14,16 @@ To change intensity mid-session say `ponytail lite`, `full`, or `ultra`. To disa
 
 ---
 
+## Project Lookup
+
+The default workspace is `D:\Projects`.
+- When I name a project, resolve it to `D:\Projects\<name>` **before** asking where it is or searching anywhere else.
+- Match case-insensitively and ignore separators and spacing — the same project name may appear with spaces, hyphens, or underscores.
+- If more than one folder matches, list the candidates and ask which one instead of picking.
+- Not found in `D:\Projects` → say so explicitly, then look elsewhere or ask.
+
+---
+
 ## CRITICAL RULES — NEVER FORGET
 
 ### RULE 1: Stop On Failure
