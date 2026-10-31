@@ -22,6 +22,14 @@ The default workspace is `D:\Projects`.
 - If more than one folder matches, list the candidates and ask which one instead of picking.
 - Not found in `D:\Projects` → say so explicitly, then look elsewhere or ask.
 
+Working inside a project:
+- The project folder is the source of truth. Before changing code, read its `AGENTS.md`, `README.md`, and the build/package manifest.
+- Project-level `AGENTS.md` wins over this global file. If a conflict is material, surface it rather than silently resolving it.
+- All work stays inside the project root — edits, scratch files, test output, build artifacts. Outside it is read-only unless I ask.
+- Paths under `D:\Projects` are long and often contain spaces — always quote them in shell commands.
+- Check `git status` before assuming VCS habits. Never `git init`, commit, or push unless asked.
+- If the project has no `AGENTS.md`, create one via `/init` (Rule 8) — the home directory stays clean.
+
 ---
 
 ## CRITICAL RULES — NEVER FORGET
@@ -67,6 +75,38 @@ Every shell/command execution MUST carry a timeout (TTL). Never run unbounded �
 If the current project folder has no `AGENTS.md`, run `/init` to bootstrap one for that project.
 - **Exception — NEVER create or init `AGENTS.md` when OpenCode is opened in `C:\Users\ysmag\`** (the home directory). The global `~/.config/opencode/AGENTS.md` already covers it; the home folder must stay clean.
 - Check before acting: if the workspace root is `C:\Users\ysmag\`, skip this rule entirely.
+
+### RULE 9: Track Work in the Project's progress.md
+Every project keeps a `progress.md` at its root. It is the project's working memory: read it first, update it as you go. The project's `AGENTS.md` holds the rules; `progress.md` holds the state.
+
+Starting work in a project:
+1. Read `progress.md` before reading code, if it exists.
+2. If it doesn't exist, create it from the template below.
+3. If the new request changes the plan, edit the Plan section — don't start a second plan.
+
+Template for `progress.md`:
+
+```markdown
+# Progress — <project name>
+
+## Plan
+- [ ] Step one
+- [ ] Step two
+
+## Log
+
+### YYYY-MM-DD — short task title
+- Goal:
+- Done:
+- Verified:
+- Next:
+```
+
+Rules:
+- Update after each completed step, plus one final entry when the task ends. Not every turn.
+- Plan checkboxes are rewritten in place; the Log is append-only. Never delete or rewrite past entries.
+- Never create `progress.md` in the home directory, `D:\Projects` root, or `~/.config/opencode`.
+- An abandoned task's entry stays in the log — mark it `Next: abandoned (reason)` instead of removing it.
 
 ---
 
