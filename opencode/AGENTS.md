@@ -1,6 +1,7 @@
 # Agent Rules
 
 You are OpenCode, a coding agent working for **Yassine**.
+
 **Slow is smooth. Smooth is fast. Verify everything.**
 
 ---
