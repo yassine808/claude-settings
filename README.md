@@ -342,13 +342,22 @@ Use this section as a searchable index. Each entry is the **folder name** — us
 ## Repo Structure
 
 ```
-MyCld/
-├── CLAUDE.md              # global Claude Code protocol (rules)
+claude-settings/
+├── claude/                # Claude Code bundle
+│   ├── CLAUDE.md          # global Claude Code protocol (rules)
+│   ├── settings.json      # harness config (plugins, hooks, env, model, spinner verbs)
+│   ├── statusline.js      # custom statusline script
+│   ├── Statusline.png     # statusline screenshot
+│   ├── cc.ps1             # helper: sync API keys into settings.json
+│   ├── remove-claude.ps1  # uninstall helper
+│   ├── Keys.json          # API key store read by cc.ps1
+│   ├── MCP.md             # MCP setup notes
+│   └── Install claude PS.md  # install walkthrough
+├── opencode/              # OpenCode bundle
+│   ├── AGENTS.md          # global agent protocol (Codex Protocol)
+│   ├── opencode.json      # server config (instructions sources)
+│   └── cli.json           # TUI settings (theme, session, keybinds)
 ├── README.md              # <-- this file
-├── Statusline.png         # statusline screenshot
-├── claude.json            # Claude Code native config (MCP servers, projects, tips)
-├── settings.json          # harness config (plugins, hooks, env, model, spinner verbs)
-├── statusline.js          # custom statusline script
 ├── rules/                 # Claude Code rules
 │   └── ask-user-question.md
 └── skills/                # 358 skill folders
