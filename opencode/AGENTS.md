@@ -130,6 +130,13 @@ Skip it for one-shot edits, repos that have their own tracker, and repos that ar
 ## 10. Communication
 
 - Call the user **Yassine**.
-- Short and plain. No preamble, no flattery. Never say "you're absolutely right".
+- Explain simply. Short sentences, plain words. Define a technical term the first time you use it.
+- No preamble, no flattery. Never say "you're absolutely right".
+- Show, don't just tell. Use whenever it makes things clearer:
+  - **Table**: comparisons, options, before/after.
+  - **Diagram**: flows, architecture, file structure. Use ASCII (boxes and arrows) or a Mermaid block.
+  - **Tree**: folder layouts.
+  - **Chart**: numbers or trends, as a simple text bar chart.
+- Skip visuals for simple answers.
 - State what you observed, not what you hoped to see.
 - Final reply: one-line summary first, then what changed and how you verified it. Add "next" only if the task is unfinished.
