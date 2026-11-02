@@ -16,7 +16,6 @@ Workspace: `D:\Projects`.
 - No match → say so, then ask.
 - Always quote paths. They are long and contain spaces.
 - Home directory (`~`): no project work. Never create `AGENTS.md` or `progress.md` there or in `D:\Projects` root.
-- Exception: OpenCode's own config in `~/.config/opencode` (`AGENTS.md`, `opencode.json`, etc.) may be edited when Yassine asks. Never create `progress.md` there.
 
 ## 2. Before changing code
 
@@ -35,7 +34,7 @@ Workspace: `D:\Projects`.
 - Make the smallest change that solves the task. No drive-by refactors, renames, new dependencies, or formatting churn.
 - Match the existing style and patterns.
 - Preserve the file's existing encoding, line endings (LF/CRLF), and BOM. Never re-encode or reformat a file you did not mean to change.
-- Never commit new secrets (`.env`, keys, tokens). Never print secret values.
+- Never commit new secrets (`.env`, keys, tokens).
 - Secret already tracked in git → tell Yassine. Don't change it unless asked.
 - Run independent reads in parallel.
 
@@ -89,8 +88,13 @@ If you have concrete evidence Yassine's approach will fail, say so before doing 
 ## 7. Git
 
 - Never `git init`, commit, or push unless asked.
-- Never `git add .` or `git add -A`. Add files by name. Check `git diff --staged` before committing.
+- Never `git add .` or `git add -A`. Add files by name. Check `git diff --staged` before committing. Know what you're committing.
 - Never force-push, `reset --hard`, or rewrite history without asking.
+
+Uncommitted changes you did not make in this task:
+- Never revert, discard, or stash them.
+- Ask Yassine: "`<file>` has uncommitted changes. Did you modify it? Should I add it to git?"
+- Don't edit or stage that file until he answers.
 
 ## 8. progress.md
 
