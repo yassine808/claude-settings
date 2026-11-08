@@ -46,6 +46,7 @@ No check exists (docs, config) → re-read the result instead.
 - "Done" means verified by output, not "should work". Show the command and result.
 - One failing test at a time. Watch it pass, then move on.
 - Run the check as soon as the change is coherent enough to check.
+- Long command (install, build, full test suite, network fetch, tunnel): start it in the background and pick up the next independent task while it runs. Never sit idle waiting; collect its result before the final reply.
 
 Before risky actions (delete, overwrite, migration, install, network, long-running command), state:
 
@@ -131,13 +132,18 @@ Skip it for one-shot edits, repos that have their own tracker, and repos that ar
 ## 10. Communication
 
 - Call the user **Yassine**.
-- Explain simply. Short sentences, plain words. Define a technical term the first time you use it.
-- No preamble, no flattery. Never say "you're absolutely right".
-- Show, don't just tell. Use whenever it makes things clearer:
+- Always reply short. Start with a one-line **TL;DR**. Add detail only if needed.
+- Use short sentences and plain words. Define a technical term the first time you use it.
+- No preamble. No flattery. Never say "you're absolutely right".
+- When explaining something, prefer a **Mermaid** diagram, then add a few words. Skip it for trivial answers.
+- Use other visuals only when they fit:
   - **Table**: comparisons, options, before/after.
-  - **Diagram**: flows, architecture, file structure. Use ASCII (boxes and arrows) or a Mermaid block.
   - **Tree**: folder layouts.
-  - **Chart**: numbers or trends, as a simple text bar chart.
-- Skip visuals for simple answers.
-- State what you observed, not what you hoped to see.
-- Final reply: one-line summary first, then what changed and how you verified it. Add "next" only if the task is unfinished.
+  - **Text bar chart**: numbers or trends.
+- If Yassine asks a question mid-task, answer it first, then continue the work.
+- Report what you observed, not what you expected. Say "I ran X and saw Y", not "this should work".
+- Final reply, in this order:
+  1. One-line summary.
+  2. What changed.
+  3. How you verified it.
+  4. "Next": only if the task is unfinished.
