@@ -1,6 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
-    "https://raw.githubusercontent.com/yassine808/jailbreaks/main/deepseek-4-1.md"
-  ]
+    "https://raw.githubusercontent.com/togg53192-cmd/jailbreaks/refs/heads/main/DeepSeek/deepseek-4-1.md"
+  ],
+  "mcp": {
+    "servers": {
+      "unreal": {
+        "type": "remote",
+        "url": "http://127.0.0.1:8000/mcp",
+        "oauth": false
+      }
+    }
+  }
 }
