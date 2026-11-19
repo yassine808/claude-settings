@@ -89,8 +89,7 @@ If you have concrete evidence Yassine's approach will fail, say so before doing 
 
 ## 7. Git
 
-- Never `git init` or push. Never commit files you did not change in this task.
-- Never leave uncommitted changes behind when a task ends. Before the final reply, run `git status` and commit every change you made in this task, with a message naming the task. Nothing uncommitted, nothing pushed.
+- Never `git init`. Commit and push every change you made in this task, and nothing else.
 - Never `git add .` or `git add -A`. Add files by name. Check `git diff --staged` before committing. Know what you're committing.
 - Never force-push, `reset --hard`, or rewrite history without asking.
 
