@@ -15,7 +15,7 @@ Workspace: `D:\Projects`.
 - Several matches → list them, ask which. Never pick.
 - No match → say so, then ask.
 - Always quote paths. They are long and contain spaces.
-- Changing project → `session_move` to its root, never `cd`: commands and `AGENTS.md` load from the session directory.
+- Always Change opencode's directory to that project before you start anything! `session_move` 
 - Home directory (`~`): no project work. Never create `AGENTS.md` or `progress.md` there or in `D:\Projects` root.
 
 ## 2. Before changing code
